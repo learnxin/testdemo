@@ -1,0 +1,27 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.example.demo.Girl",
+      "name": "girl",
+      "type": "com.example.demo.Girl"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.example.demo.Girl",
+      "name": "girl.age",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.example.demo.Girl",
+      "name": "girl.cupsize",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.example.demo.Girl",
+      "name": "girl.height",
+      "type": "java.lang.Double"
+    }
+  ]
+}

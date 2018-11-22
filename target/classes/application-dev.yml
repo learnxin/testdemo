@@ -1,0 +1,12 @@
+server:
+  port: 8083
+  #context-path: /rua
+girl:
+  cupsize: A
+  age: 18
+  height: 170
+
+###################  MyBatis 配置  ###################
+mybatis:
+    type-aliases-package: com.example.demo.Gentity
+    mapper-locations: classpath:/myBatis/*Mapper.xml

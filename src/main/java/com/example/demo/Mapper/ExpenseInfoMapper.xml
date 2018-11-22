@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.demo.Mapper.ExpenseInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.example.demo.Gentity.ExpenseInfo" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="project" property="project" jdbcType="VARCHAR" />
+    <result column="executive" property="executive" jdbcType="VARCHAR" />
+    <result column="accountname" property="accountname" jdbcType="VARCHAR" />
+    <result column="depositbank" property="depositbank" jdbcType="VARCHAR" />
+    <result column="bankid" property="bankid" jdbcType="VARCHAR" />
+    <result column="cardid" property="cardid" jdbcType="VARCHAR" />
+    <result column="contacts" property="contacts" jdbcType="VARCHAR" />
+    <result column="phonenumber" property="phonenumber" jdbcType="VARCHAR" />
+    <result column="mailid" property="mailid" jdbcType="VARCHAR" />
+    <result column="facsimile" property="facsimile" jdbcType="VARCHAR" />
+    <result column="address" property="address" jdbcType="VARCHAR" />
+    <result column="postcode" property="postcode" jdbcType="VARCHAR" />
+    <result column="area" property="area" jdbcType="VARCHAR" />
+    <result column="applytime" property="applytime" jdbcType="TIMESTAMP" />
+    <result column="currency" property="currency" jdbcType="VARCHAR" />
+    <result column="paid" property="paid" jdbcType="DECIMAL" />
+    <result column="payreason" property="payreason" jdbcType="VARCHAR" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="goodsname" property="goodsname" jdbcType="VARCHAR" />
+    <result column="equivalent" property="equivalent" jdbcType="DECIMAL" />
+    <result column="unit" property="unit" jdbcType="VARCHAR" />
+    <result column="quantity" property="quantity" jdbcType="INTEGER" />
+    <result column="purpose" property="purpose" jdbcType="VARCHAR" />
+    <result column="remarkg" property="remarkg" jdbcType="VARCHAR" />
+    <result column="projectid" property="projectid" jdbcType="VARCHAR" />
+    <result column="exeuuid" property="exeuuid" jdbcType="VARCHAR" />
+    <result column="type" property="type" jdbcType="VARCHAR" />
+    <result column="operator" property="operator" jdbcType="VARCHAR" />
+    <result column="expendtime" property="expendtime" jdbcType="TIMESTAMP" />
+    <result column="paytype" property="paytype" jdbcType="INTEGER" />
+    <result column="haveinvoice" property="haveinvoice" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, project, executive, accountname, depositbank, bankid, cardid, contacts, phonenumber, 
+    mailid, facsimile, address, postcode, area, applytime, currency, paid, payreason, 
+    remark, goodsname, equivalent, unit, quantity, purpose, remarkg, projectid, exeuuid, 
+    type, operator, expendtime, paytype, haveinvoice
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from pro_expense_info
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from pro_expense_info
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.example.demo.Gentity.ExpenseInfo" >
+    insert into pro_expense_info (id, project, executive, 
+      accountname, depositbank, bankid, 
+      cardid, contacts, phonenumber, 
+      mailid, facsimile, address, 
+      postcode, area, applytime, 
+      currency, paid, payreason, 
+      remark, goodsname, equivalent, 
+      unit, quantity, purpose, 
+      remarkg, projectid, exeuuid, 
+      type, operator, expendtime, 
+      paytype, haveinvoice)
+    values (#{id,jdbcType=INTEGER}, #{project,jdbcType=VARCHAR}, #{executive,jdbcType=VARCHAR}, 
+      #{accountname,jdbcType=VARCHAR}, #{depositbank,jdbcType=VARCHAR}, #{bankid,jdbcType=VARCHAR}, 
+      #{cardid,jdbcType=VARCHAR}, #{contacts,jdbcType=VARCHAR}, #{phonenumber,jdbcType=VARCHAR}, 
+      #{mailid,jdbcType=VARCHAR}, #{facsimile,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, 
+      #{postcode,jdbcType=VARCHAR}, #{area,jdbcType=VARCHAR}, #{applytime,jdbcType=TIMESTAMP}, 
+      #{currency,jdbcType=VARCHAR}, #{paid,jdbcType=DECIMAL}, #{payreason,jdbcType=VARCHAR}, 
+      #{remark,jdbcType=VARCHAR}, #{goodsname,jdbcType=VARCHAR}, #{equivalent,jdbcType=DECIMAL}, 
+      #{unit,jdbcType=VARCHAR}, #{quantity,jdbcType=INTEGER}, #{purpose,jdbcType=VARCHAR}, 
+      #{remarkg,jdbcType=VARCHAR}, #{projectid,jdbcType=VARCHAR}, #{exeuuid,jdbcType=VARCHAR}, 
+      #{type,jdbcType=VARCHAR}, #{operator,jdbcType=VARCHAR}, #{expendtime,jdbcType=TIMESTAMP}, 
+      #{paytype,jdbcType=INTEGER}, #{haveinvoice,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.example.demo.Gentity.ExpenseInfo" >
+    insert into pro_expense_info
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="project != null" >
+        project,
+      </if>
+      <if test="executive != null" >
+        executive,
+      </if>
+      <if test="accountname != null" >
+        accountname,
+      </if>
+      <if test="depositbank != null" >
+        depositbank,
+      </if>
+      <if test="bankid != null" >
+        bankid,
+      </if>
+      <if test="cardid != null" >
+        cardid,
+      </if>
+      <if test="contacts != null" >
+        contacts,
+      </if>
+      <if test="phonenumber != null" >
+        phonenumber,
+      </if>
+      <if test="mailid != null" >
+        mailid,
+      </if>
+      <if test="facsimile != null" >
+        facsimile,
+      </if>
+      <if test="address != null" >
+        address,
+      </if>
+      <if test="postcode != null" >
+        postcode,
+      </if>
+      <if test="area != null" >
+        area,
+      </if>
+      <if test="applytime != null" >
+        applytime,
+      </if>
+      <if test="currency != null" >
+        currency,
+      </if>
+      <if test="paid != null" >
+        paid,
+      </if>
+      <if test="payreason != null" >
+        payreason,
+      </if>
+      <if test="remark != null" >
+        remark,
+      </if>
+      <if test="goodsname != null" >
+        goodsname,
+      </if>
+      <if test="equivalent != null" >
+        equivalent,
+      </if>
+      <if test="unit != null" >
+        unit,
+      </if>
+      <if test="quantity != null" >
+        quantity,
+      </if>
+      <if test="purpose != null" >
+        purpose,
+      </if>
+      <if test="remarkg != null" >
+        remarkg,
+      </if>
+      <if test="projectid != null" >
+        projectid,
+      </if>
+      <if test="exeuuid != null" >
+        exeuuid,
+      </if>
+      <if test="type != null" >
+        type,
+      </if>
+      <if test="operator != null" >
+        operator,
+      </if>
+      <if test="expendtime != null" >
+        expendtime,
+      </if>
+      <if test="paytype != null" >
+        paytype,
+      </if>
+      <if test="haveinvoice != null" >
+        haveinvoice,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="project != null" >
+        #{project,jdbcType=VARCHAR},
+      </if>
+      <if test="executive != null" >
+        #{executive,jdbcType=VARCHAR},
+      </if>
+      <if test="accountname != null" >
+        #{accountname,jdbcType=VARCHAR},
+      </if>
+      <if test="depositbank != null" >
+        #{depositbank,jdbcType=VARCHAR},
+      </if>
+      <if test="bankid != null" >
+        #{bankid,jdbcType=VARCHAR},
+      </if>
+      <if test="cardid != null" >
+        #{cardid,jdbcType=VARCHAR},
+      </if>
+      <if test="contacts != null" >
+        #{contacts,jdbcType=VARCHAR},
+      </if>
+      <if test="phonenumber != null" >
+        #{phonenumber,jdbcType=VARCHAR},
+      </if>
+      <if test="mailid != null" >
+        #{mailid,jdbcType=VARCHAR},
+      </if>
+      <if test="facsimile != null" >
+        #{facsimile,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null" >
+        #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="postcode != null" >
+        #{postcode,jdbcType=VARCHAR},
+      </if>
+      <if test="area != null" >
+        #{area,jdbcType=VARCHAR},
+      </if>
+      <if test="applytime != null" >
+        #{applytime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="currency != null" >
+        #{currency,jdbcType=VARCHAR},
+      </if>
+      <if test="paid != null" >
+        #{paid,jdbcType=DECIMAL},
+      </if>
+      <if test="payreason != null" >
+        #{payreason,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="goodsname != null" >
+        #{goodsname,jdbcType=VARCHAR},
+      </if>
+      <if test="equivalent != null" >
+        #{equivalent,jdbcType=DECIMAL},
+      </if>
+      <if test="unit != null" >
+        #{unit,jdbcType=VARCHAR},
+      </if>
+      <if test="quantity != null" >
+        #{quantity,jdbcType=INTEGER},
+      </if>
+      <if test="purpose != null" >
+        #{purpose,jdbcType=VARCHAR},
+      </if>
+      <if test="remarkg != null" >
+        #{remarkg,jdbcType=VARCHAR},
+      </if>
+      <if test="projectid != null" >
+        #{projectid,jdbcType=VARCHAR},
+      </if>
+      <if test="exeuuid != null" >
+        #{exeuuid,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null" >
+        #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="operator != null" >
+        #{operator,jdbcType=VARCHAR},
+      </if>
+      <if test="expendtime != null" >
+        #{expendtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="paytype != null" >
+        #{paytype,jdbcType=INTEGER},
+      </if>
+      <if test="haveinvoice != null" >
+        #{haveinvoice,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.demo.Gentity.ExpenseInfo" >
+    update pro_expense_info
+    <set >
+      <if test="project != null" >
+        project = #{project,jdbcType=VARCHAR},
+      </if>
+      <if test="executive != null" >
+        executive = #{executive,jdbcType=VARCHAR},
+      </if>
+      <if test="accountname != null" >
+        accountname = #{accountname,jdbcType=VARCHAR},
+      </if>
+      <if test="depositbank != null" >
+        depositbank = #{depositbank,jdbcType=VARCHAR},
+      </if>
+      <if test="bankid != null" >
+        bankid = #{bankid,jdbcType=VARCHAR},
+      </if>
+      <if test="cardid != null" >
+        cardid = #{cardid,jdbcType=VARCHAR},
+      </if>
+      <if test="contacts != null" >
+        contacts = #{contacts,jdbcType=VARCHAR},
+      </if>
+      <if test="phonenumber != null" >
+        phonenumber = #{phonenumber,jdbcType=VARCHAR},
+      </if>
+      <if test="mailid != null" >
+        mailid = #{mailid,jdbcType=VARCHAR},
+      </if>
+      <if test="facsimile != null" >
+        facsimile = #{facsimile,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null" >
+        address = #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="postcode != null" >
+        postcode = #{postcode,jdbcType=VARCHAR},
+      </if>
+      <if test="area != null" >
+        area = #{area,jdbcType=VARCHAR},
+      </if>
+      <if test="applytime != null" >
+        applytime = #{applytime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="currency != null" >
+        currency = #{currency,jdbcType=VARCHAR},
+      </if>
+      <if test="paid != null" >
+        paid = #{paid,jdbcType=DECIMAL},
+      </if>
+      <if test="payreason != null" >
+        payreason = #{payreason,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="goodsname != null" >
+        goodsname = #{goodsname,jdbcType=VARCHAR},
+      </if>
+      <if test="equivalent != null" >
+        equivalent = #{equivalent,jdbcType=DECIMAL},
+      </if>
+      <if test="unit != null" >
+        unit = #{unit,jdbcType=VARCHAR},
+      </if>
+      <if test="quantity != null" >
+        quantity = #{quantity,jdbcType=INTEGER},
+      </if>
+      <if test="purpose != null" >
+        purpose = #{purpose,jdbcType=VARCHAR},
+      </if>
+      <if test="remarkg != null" >
+        remarkg = #{remarkg,jdbcType=VARCHAR},
+      </if>
+      <if test="projectid != null" >
+        projectid = #{projectid,jdbcType=VARCHAR},
+      </if>
+      <if test="exeuuid != null" >
+        exeuuid = #{exeuuid,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null" >
+        type = #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="operator != null" >
+        operator = #{operator,jdbcType=VARCHAR},
+      </if>
+      <if test="expendtime != null" >
+        expendtime = #{expendtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="paytype != null" >
+        paytype = #{paytype,jdbcType=INTEGER},
+      </if>
+      <if test="haveinvoice != null" >
+        haveinvoice = #{haveinvoice,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.demo.Gentity.ExpenseInfo" >
+    update pro_expense_info
+    set project = #{project,jdbcType=VARCHAR},
+      executive = #{executive,jdbcType=VARCHAR},
+      accountname = #{accountname,jdbcType=VARCHAR},
+      depositbank = #{depositbank,jdbcType=VARCHAR},
+      bankid = #{bankid,jdbcType=VARCHAR},
+      cardid = #{cardid,jdbcType=VARCHAR},
+      contacts = #{contacts,jdbcType=VARCHAR},
+      phonenumber = #{phonenumber,jdbcType=VARCHAR},
+      mailid = #{mailid,jdbcType=VARCHAR},
+      facsimile = #{facsimile,jdbcType=VARCHAR},
+      address = #{address,jdbcType=VARCHAR},
+      postcode = #{postcode,jdbcType=VARCHAR},
+      area = #{area,jdbcType=VARCHAR},
+      applytime = #{applytime,jdbcType=TIMESTAMP},
+      currency = #{currency,jdbcType=VARCHAR},
+      paid = #{paid,jdbcType=DECIMAL},
+      payreason = #{payreason,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=VARCHAR},
+      goodsname = #{goodsname,jdbcType=VARCHAR},
+      equivalent = #{equivalent,jdbcType=DECIMAL},
+      unit = #{unit,jdbcType=VARCHAR},
+      quantity = #{quantity,jdbcType=INTEGER},
+      purpose = #{purpose,jdbcType=VARCHAR},
+      remarkg = #{remarkg,jdbcType=VARCHAR},
+      projectid = #{projectid,jdbcType=VARCHAR},
+      exeuuid = #{exeuuid,jdbcType=VARCHAR},
+      type = #{type,jdbcType=VARCHAR},
+      operator = #{operator,jdbcType=VARCHAR},
+      expendtime = #{expendtime,jdbcType=TIMESTAMP},
+      paytype = #{paytype,jdbcType=INTEGER},
+      haveinvoice = #{haveinvoice,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

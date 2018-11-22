@@ -1,0 +1,27 @@
+
+##########################################################
+  ###################  开发环境的profile  ###################
+  ##########################################################
+  spring:
+    profiles:
+      active: dev
+    mvc:
+      view:
+        prefix: /templates/
+        suffix: .html
+        #设置静态文件路径
+        static-path-pattern: classpath:/static/**
+    freemarker:
+      #设置ftl文件路径
+      template-loader-path: classpath:/templates,classpath:/office
+      suffix: .ftl
+      request-context-attribute: request
+      content-type: text/html
+      expose-request-attributes: false
+      expose-session-attributes: false
+      check-template-location: true
+      allow-request-override: false
+      allow-session-override: false
+      cache: false
+      charset: utf-8
+
