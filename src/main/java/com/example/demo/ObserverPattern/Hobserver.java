@@ -10,6 +10,9 @@ public class Hobserver implements Observer{
         observerAble.registerItem(this);
     }
 
+    public Hobserver() {
+    }
+
     @Override
     public void update(float t, float h) {
         System.out.println("i am hobserver"+ h);

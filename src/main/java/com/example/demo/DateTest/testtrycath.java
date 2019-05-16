@@ -7,7 +7,7 @@ public class testtrycath {
         try {
 
             try {
-                System.out.println(3/0);
+                System.out.println(2/0);
             } catch (Exception e) {
                 e.printStackTrace();
                 vvm="yyf";
