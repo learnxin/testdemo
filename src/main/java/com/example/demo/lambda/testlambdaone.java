@@ -63,25 +63,25 @@ public class testlambdaone {
     public void distinctPrimary(String[] strs){
         List<String> strings = Arrays.asList(strs);
 
-        List<Integer> collect = strings.stream()
-                .map(o -> Integer.parseInt(o))
-                .filter(o -> isPrime(o))
+//        List<Integer> collect = strings.stream()
+//                .map(o -> Integer.parseInt(o))
+//                .filter(o -> isPrime(o))
+//                .distinct()
+//                .collect(Collectors.toList());
+
+
+//        Map<Integer, Integer> collect = strings.stream()
+//                .map(o -> Integer.parseInt(o))
+//                .filter(o -> isPrime(o))
+////                .distinct()
+//                .collect(Collectors.groupingBy(o -> o, Collectors.summingInt(o -> 1)));
+
+
+        Integer collect = strings.stream()
+                .map(Integer::parseInt)
+                .filter(this::isPrime)
                 .distinct()
-                .collect(Collectors.toList());
-
-
-        Map<Integer, Integer> collect1 = strings.stream()
-                .map(o -> Integer.parseInt(o))
-                .filter(o -> isPrime(o))
-//                .distinct()
-                .collect(Collectors.groupingBy(o -> o, Collectors.summingInt(o -> 1)));
-
-
-//        Integer collect = strings.stream()
-//                .map(Integer::parseInt)
-//                .filter(this::isPrime)
-//                .distinct()
-//                .reduce(0, (x, y) -> x + y);
+                .reduce(0, (x, y) -> x + y);
         System.out.println(collect);
     }
 
