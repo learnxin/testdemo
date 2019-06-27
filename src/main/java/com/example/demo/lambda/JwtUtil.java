@@ -23,7 +23,7 @@ public class JwtUtil {
     public  String generateToken(Map map) {
 
         //you can put any data in the map
-
+        //testconflict
         Date nowdate = new Date();
         Date expireDate = getAfterDate(nowdate,0,0,0,Expiration,0,0);
         JwtBuilder builder = Jwts.builder();
