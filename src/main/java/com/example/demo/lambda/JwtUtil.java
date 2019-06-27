@@ -27,7 +27,7 @@ public class JwtUtil {
         Date nowdate = new Date();
         Date expireDate = getAfterDate(nowdate,0,0,0,Expiration,0,0);
         JwtBuilder builder = Jwts.builder();
-//        encodeBase64(map);
+        encodeBase64(map);
         String jwt = builder
                 .setClaims(map)
                 /*生成签名的时间*/
