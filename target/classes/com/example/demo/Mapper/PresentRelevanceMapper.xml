@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.demo.Mapper.PresentRelevanceMapper" >
+  <resultMap id="BaseResultMap" type="com.example.demo.Gentity.PresentRelevance" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="project_name" property="projectName" jdbcType="VARCHAR" />
+    <result column="projectid" property="projectid" jdbcType="VARCHAR" />
+    <result column="present_time" property="presentTime" jdbcType="TIMESTAMP" />
+    <result column="present_username" property="presentUsername" jdbcType="VARCHAR" />
+    <result column="present_userid" property="presentUserid" jdbcType="VARCHAR" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="creattime" property="creattime" jdbcType="TIMESTAMP" />
+    <result column="updatetime" property="updatetime" jdbcType="TIMESTAMP" />
+    <result column="deleted" property="deleted" jdbcType="BIT" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, project_name, projectid, present_time, present_username, present_userid, remark, 
+    creattime, updatetime, deleted
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from project_present_relevance
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from project_present_relevance
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.example.demo.Gentity.PresentRelevance" >
+    insert into project_present_relevance (id, project_name, projectid, 
+      present_time, present_username, present_userid, 
+      remark, creattime, updatetime, 
+      deleted)
+    values (#{id,jdbcType=BIGINT}, #{projectName,jdbcType=VARCHAR}, #{projectid,jdbcType=VARCHAR}, 
+      #{presentTime,jdbcType=TIMESTAMP}, #{presentUsername,jdbcType=VARCHAR}, #{presentUserid,jdbcType=VARCHAR}, 
+      #{remark,jdbcType=VARCHAR}, #{creattime,jdbcType=TIMESTAMP}, #{updatetime,jdbcType=TIMESTAMP}, 
+      #{deleted,jdbcType=BIT})
+  </insert>
+  <insert id="insertSelective" parameterType="com.example.demo.Gentity.PresentRelevance" >
+    insert into project_present_relevance
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="projectName != null" >
+        project_name,
+      </if>
+      <if test="projectid != null" >
+        projectid,
+      </if>
+      <if test="presentTime != null" >
+        present_time,
+      </if>
+      <if test="presentUsername != null" >
+        present_username,
+      </if>
+      <if test="presentUserid != null" >
+        present_userid,
+      </if>
+      <if test="remark != null" >
+        remark,
+      </if>
+      <if test="creattime != null" >
+        creattime,
+      </if>
+      <if test="updatetime != null" >
+        updatetime,
+      </if>
+      <if test="deleted != null" >
+        deleted,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="projectName != null" >
+        #{projectName,jdbcType=VARCHAR},
+      </if>
+      <if test="projectid != null" >
+        #{projectid,jdbcType=VARCHAR},
+      </if>
+      <if test="presentTime != null" >
+        #{presentTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="presentUsername != null" >
+        #{presentUsername,jdbcType=VARCHAR},
+      </if>
+      <if test="presentUserid != null" >
+        #{presentUserid,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="creattime != null" >
+        #{creattime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatetime != null" >
+        #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="deleted != null" >
+        #{deleted,jdbcType=BIT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.demo.Gentity.PresentRelevance" >
+    update project_present_relevance
+    <set >
+      <if test="projectName != null" >
+        project_name = #{projectName,jdbcType=VARCHAR},
+      </if>
+      <if test="projectid != null" >
+        projectid = #{projectid,jdbcType=VARCHAR},
+      </if>
+      <if test="presentTime != null" >
+        present_time = #{presentTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="presentUsername != null" >
+        present_username = #{presentUsername,jdbcType=VARCHAR},
+      </if>
+      <if test="presentUserid != null" >
+        present_userid = #{presentUserid,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="creattime != null" >
+        creattime = #{creattime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatetime != null" >
+        updatetime = #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="deleted != null" >
+        deleted = #{deleted,jdbcType=BIT},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.demo.Gentity.PresentRelevance" >
+    update project_present_relevance
+    set project_name = #{projectName,jdbcType=VARCHAR},
+      projectid = #{projectid,jdbcType=VARCHAR},
+      present_time = #{presentTime,jdbcType=TIMESTAMP},
+      present_username = #{presentUsername,jdbcType=VARCHAR},
+      present_userid = #{presentUserid,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=VARCHAR},
+      creattime = #{creattime,jdbcType=TIMESTAMP},
+      updatetime = #{updatetime,jdbcType=TIMESTAMP},
+      deleted = #{deleted,jdbcType=BIT}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

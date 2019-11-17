@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.demo.Mapper.shoreChargerMapper" >
+  <resultMap id="BaseResultMap" type="com.example.demo.Gentity.shoreCharger" >
+    <id column="uuid" property="uuid" jdbcType="VARCHAR" />
+    <result column="spaceUuid" property="spaceUuid" jdbcType="VARCHAR" />
+    <result column="stakeuuid" property="stakeuuid" jdbcType="VARCHAR" />
+    <result column="stationuuid" property="stationuuid" jdbcType="VARCHAR" />
+    <result column="parkingAreaUuid" property="parkingAreaUuid" jdbcType="VARCHAR" />
+    <result column="chargerNo" property="chargerNo" jdbcType="VARCHAR" />
+    <result column="stakeNo" property="stakeNo" jdbcType="VARCHAR" />
+    <result column="assetNo" property="assetNo" jdbcType="VARCHAR" />
+    <result column="ct" property="ct" jdbcType="VARCHAR" />
+    <result column="pt" property="pt" jdbcType="VARCHAR" />
+    <result column="rate" property="rate" jdbcType="VARCHAR" />
+    <result column="ratedCapacity" property="ratedCapacity" jdbcType="DOUBLE" />
+    <result column="type" property="type" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+    <result column="isFlag" property="isFlag" jdbcType="VARCHAR" />
+    <result column="creatorUuid" property="creatorUuid" jdbcType="VARCHAR" />
+    <result column="createdAt" property="createdAt" jdbcType="TIMESTAMP" />
+    <result column="updaterUuid" property="updaterUuid" jdbcType="VARCHAR" />
+    <result column="updatedAt" property="updatedAt" jdbcType="TIMESTAMP" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    uuid, spaceUuid, stakeuuid, stationuuid, parkingAreaUuid, chargerNo, stakeNo, assetNo, 
+    ct, pt, rate, ratedCapacity, type, status, isFlag, creatorUuid, createdAt, updaterUuid, 
+    updatedAt, name
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from base_shore_charger
+    where uuid = #{uuid,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from base_shore_charger
+    where uuid = #{uuid,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.example.demo.Gentity.shoreCharger" >
+    insert into base_shore_charger (uuid, spaceUuid, stakeuuid, 
+      stationuuid, parkingAreaUuid, chargerNo, 
+      stakeNo, assetNo, ct, 
+      pt, rate, ratedCapacity, 
+      type, status, isFlag, 
+      creatorUuid, createdAt, updaterUuid, 
+      updatedAt, name)
+    values (#{uuid,jdbcType=VARCHAR}, #{spaceUuid,jdbcType=VARCHAR}, #{stakeuuid,jdbcType=VARCHAR}, 
+      #{stationuuid,jdbcType=VARCHAR}, #{parkingAreaUuid,jdbcType=VARCHAR}, #{chargerNo,jdbcType=VARCHAR}, 
+      #{stakeNo,jdbcType=VARCHAR}, #{assetNo,jdbcType=VARCHAR}, #{ct,jdbcType=VARCHAR}, 
+      #{pt,jdbcType=VARCHAR}, #{rate,jdbcType=VARCHAR}, #{ratedCapacity,jdbcType=DOUBLE}, 
+      #{type,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER}, #{isFlag,jdbcType=VARCHAR}, 
+      #{creatorUuid,jdbcType=VARCHAR}, #{createdAt,jdbcType=TIMESTAMP}, #{updaterUuid,jdbcType=VARCHAR}, 
+      #{updatedAt,jdbcType=TIMESTAMP}, #{name,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.example.demo.Gentity.shoreCharger" >
+    insert into base_shore_charger
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="uuid != null" >
+        uuid,
+      </if>
+      <if test="spaceUuid != null" >
+        spaceUuid,
+      </if>
+      <if test="stakeuuid != null" >
+        stakeuuid,
+      </if>
+      <if test="stationuuid != null" >
+        stationuuid,
+      </if>
+      <if test="parkingAreaUuid != null" >
+        parkingAreaUuid,
+      </if>
+      <if test="chargerNo != null" >
+        chargerNo,
+      </if>
+      <if test="stakeNo != null" >
+        stakeNo,
+      </if>
+      <if test="assetNo != null" >
+        assetNo,
+      </if>
+      <if test="ct != null" >
+        ct,
+      </if>
+      <if test="pt != null" >
+        pt,
+      </if>
+      <if test="rate != null" >
+        rate,
+      </if>
+      <if test="ratedCapacity != null" >
+        ratedCapacity,
+      </if>
+      <if test="type != null" >
+        type,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+      <if test="isFlag != null" >
+        isFlag,
+      </if>
+      <if test="creatorUuid != null" >
+        creatorUuid,
+      </if>
+      <if test="createdAt != null" >
+        createdAt,
+      </if>
+      <if test="updaterUuid != null" >
+        updaterUuid,
+      </if>
+      <if test="updatedAt != null" >
+        updatedAt,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="uuid != null" >
+        #{uuid,jdbcType=VARCHAR},
+      </if>
+      <if test="spaceUuid != null" >
+        #{spaceUuid,jdbcType=VARCHAR},
+      </if>
+      <if test="stakeuuid != null" >
+        #{stakeuuid,jdbcType=VARCHAR},
+      </if>
+      <if test="stationuuid != null" >
+        #{stationuuid,jdbcType=VARCHAR},
+      </if>
+      <if test="parkingAreaUuid != null" >
+        #{parkingAreaUuid,jdbcType=VARCHAR},
+      </if>
+      <if test="chargerNo != null" >
+        #{chargerNo,jdbcType=VARCHAR},
+      </if>
+      <if test="stakeNo != null" >
+        #{stakeNo,jdbcType=VARCHAR},
+      </if>
+      <if test="assetNo != null" >
+        #{assetNo,jdbcType=VARCHAR},
+      </if>
+      <if test="ct != null" >
+        #{ct,jdbcType=VARCHAR},
+      </if>
+      <if test="pt != null" >
+        #{pt,jdbcType=VARCHAR},
+      </if>
+      <if test="rate != null" >
+        #{rate,jdbcType=VARCHAR},
+      </if>
+      <if test="ratedCapacity != null" >
+        #{ratedCapacity,jdbcType=DOUBLE},
+      </if>
+      <if test="type != null" >
+        #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="isFlag != null" >
+        #{isFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="creatorUuid != null" >
+        #{creatorUuid,jdbcType=VARCHAR},
+      </if>
+      <if test="createdAt != null" >
+        #{createdAt,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updaterUuid != null" >
+        #{updaterUuid,jdbcType=VARCHAR},
+      </if>
+      <if test="updatedAt != null" >
+        #{updatedAt,jdbcType=TIMESTAMP},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.demo.Gentity.shoreCharger" >
+    update base_shore_charger
+    <set >
+      <if test="spaceUuid != null" >
+        spaceUuid = #{spaceUuid,jdbcType=VARCHAR},
+      </if>
+      <if test="stakeuuid != null" >
+        stakeuuid = #{stakeuuid,jdbcType=VARCHAR},
+      </if>
+      <if test="stationuuid != null" >
+        stationuuid = #{stationuuid,jdbcType=VARCHAR},
+      </if>
+      <if test="parkingAreaUuid != null" >
+        parkingAreaUuid = #{parkingAreaUuid,jdbcType=VARCHAR},
+      </if>
+      <if test="chargerNo != null" >
+        chargerNo = #{chargerNo,jdbcType=VARCHAR},
+      </if>
+      <if test="stakeNo != null" >
+        stakeNo = #{stakeNo,jdbcType=VARCHAR},
+      </if>
+      <if test="assetNo != null" >
+        assetNo = #{assetNo,jdbcType=VARCHAR},
+      </if>
+      <if test="ct != null" >
+        ct = #{ct,jdbcType=VARCHAR},
+      </if>
+      <if test="pt != null" >
+        pt = #{pt,jdbcType=VARCHAR},
+      </if>
+      <if test="rate != null" >
+        rate = #{rate,jdbcType=VARCHAR},
+      </if>
+      <if test="ratedCapacity != null" >
+        ratedCapacity = #{ratedCapacity,jdbcType=DOUBLE},
+      </if>
+      <if test="type != null" >
+        type = #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="isFlag != null" >
+        isFlag = #{isFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="creatorUuid != null" >
+        creatorUuid = #{creatorUuid,jdbcType=VARCHAR},
+      </if>
+      <if test="createdAt != null" >
+        createdAt = #{createdAt,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updaterUuid != null" >
+        updaterUuid = #{updaterUuid,jdbcType=VARCHAR},
+      </if>
+      <if test="updatedAt != null" >
+        updatedAt = #{updatedAt,jdbcType=TIMESTAMP},
+      </if>
+      <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where uuid = #{uuid,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.demo.Gentity.shoreCharger" >
+    update base_shore_charger
+    set spaceUuid = #{spaceUuid,jdbcType=VARCHAR},
+      stakeuuid = #{stakeuuid,jdbcType=VARCHAR},
+      stationuuid = #{stationuuid,jdbcType=VARCHAR},
+      parkingAreaUuid = #{parkingAreaUuid,jdbcType=VARCHAR},
+      chargerNo = #{chargerNo,jdbcType=VARCHAR},
+      stakeNo = #{stakeNo,jdbcType=VARCHAR},
+      assetNo = #{assetNo,jdbcType=VARCHAR},
+      ct = #{ct,jdbcType=VARCHAR},
+      pt = #{pt,jdbcType=VARCHAR},
+      rate = #{rate,jdbcType=VARCHAR},
+      ratedCapacity = #{ratedCapacity,jdbcType=DOUBLE},
+      type = #{type,jdbcType=VARCHAR},
+      status = #{status,jdbcType=INTEGER},
+      isFlag = #{isFlag,jdbcType=VARCHAR},
+      creatorUuid = #{creatorUuid,jdbcType=VARCHAR},
+      createdAt = #{createdAt,jdbcType=TIMESTAMP},
+      updaterUuid = #{updaterUuid,jdbcType=VARCHAR},
+      updatedAt = #{updatedAt,jdbcType=TIMESTAMP},
+      name = #{name,jdbcType=VARCHAR}
+    where uuid = #{uuid,jdbcType=VARCHAR}
+  </update>
+</mapper>

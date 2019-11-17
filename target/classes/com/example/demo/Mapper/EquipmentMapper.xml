@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.demo.Mapper.EquipmentMapper" >
+  <resultMap id="BaseResultMap" type="com.example.demo.Gentity.Equipment" >
+    <id column="uuid" property="uuid" jdbcType="VARCHAR" />
+    <result column="vendorUuid" property="vendorUuid" jdbcType="VARCHAR" />
+    <result column="equipmentNo" property="equipmentNo" jdbcType="VARCHAR" />
+    <result column="equipmentName" property="equipmentName" jdbcType="VARCHAR" />
+    <result column="ratedCapacity" property="ratedCapacity" jdbcType="DOUBLE" />
+    <result column="power" property="power" jdbcType="DOUBLE" />
+    <result column="frequency" property="frequency" jdbcType="DOUBLE" />
+    <result column="ratedVolt" property="ratedVolt" jdbcType="VARCHAR" />
+    <result column="minOutVolt" property="minOutVolt" jdbcType="DOUBLE" />
+    <result column="maxOutVolt" property="maxOutVolt" jdbcType="DOUBLE" />
+    <result column="maxOutCurrent" property="maxOutCurrent" jdbcType="DOUBLE" />
+    <result column="minOutCurrent" property="minOutCurrent" jdbcType="DOUBLE" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+    <result column="isFlag" property="isFlag" jdbcType="VARCHAR" />
+    <result column="creatorUuid" property="creatorUuid" jdbcType="VARCHAR" />
+    <result column="createdAt" property="createdAt" jdbcType="TIMESTAMP" />
+    <result column="updaterUuid" property="updaterUuid" jdbcType="VARCHAR" />
+    <result column="updatedAt" property="updatedAt" jdbcType="TIMESTAMP" />
+    <result column="assetSmallType" property="assetSmallType" jdbcType="VARCHAR" />
+    <result column="assetType" property="assetType" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    uuid, vendorUuid, equipmentNo, equipmentName, ratedCapacity, power, frequency, ratedVolt, 
+    minOutVolt, maxOutVolt, maxOutCurrent, minOutCurrent, status, isFlag, creatorUuid, 
+    createdAt, updaterUuid, updatedAt, assetSmallType, assetType
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from base_equipment
+    where uuid = #{uuid,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from base_equipment
+    where uuid = #{uuid,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.example.demo.Gentity.Equipment" >
+    insert into base_equipment (uuid, vendorUuid, equipmentNo, 
+      equipmentName, ratedCapacity, power, 
+      frequency, ratedVolt, minOutVolt, 
+      maxOutVolt, maxOutCurrent, minOutCurrent, 
+      status, isFlag, creatorUuid, 
+      createdAt, updaterUuid, updatedAt, 
+      assetSmallType, assetType)
+    values (#{uuid,jdbcType=VARCHAR}, #{vendorUuid,jdbcType=VARCHAR}, #{equipmentNo,jdbcType=VARCHAR}, 
+      #{equipmentName,jdbcType=VARCHAR}, #{ratedCapacity,jdbcType=DOUBLE}, #{power,jdbcType=DOUBLE}, 
+      #{frequency,jdbcType=DOUBLE}, #{ratedVolt,jdbcType=VARCHAR}, #{minOutVolt,jdbcType=DOUBLE}, 
+      #{maxOutVolt,jdbcType=DOUBLE}, #{maxOutCurrent,jdbcType=DOUBLE}, #{minOutCurrent,jdbcType=DOUBLE}, 
+      #{status,jdbcType=INTEGER}, #{isFlag,jdbcType=VARCHAR}, #{creatorUuid,jdbcType=VARCHAR}, 
+      #{createdAt,jdbcType=TIMESTAMP}, #{updaterUuid,jdbcType=VARCHAR}, #{updatedAt,jdbcType=TIMESTAMP}, 
+      #{assetSmallType,jdbcType=VARCHAR}, #{assetType,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.example.demo.Gentity.Equipment" >
+    insert into base_equipment
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="uuid != null" >
+        uuid,
+      </if>
+      <if test="vendorUuid != null" >
+        vendorUuid,
+      </if>
+      <if test="equipmentNo != null" >
+        equipmentNo,
+      </if>
+      <if test="equipmentName != null" >
+        equipmentName,
+      </if>
+      <if test="ratedCapacity != null" >
+        ratedCapacity,
+      </if>
+      <if test="power != null" >
+        power,
+      </if>
+      <if test="frequency != null" >
+        frequency,
+      </if>
+      <if test="ratedVolt != null" >
+        ratedVolt,
+      </if>
+      <if test="minOutVolt != null" >
+        minOutVolt,
+      </if>
+      <if test="maxOutVolt != null" >
+        maxOutVolt,
+      </if>
+      <if test="maxOutCurrent != null" >
+        maxOutCurrent,
+      </if>
+      <if test="minOutCurrent != null" >
+        minOutCurrent,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+      <if test="isFlag != null" >
+        isFlag,
+      </if>
+      <if test="creatorUuid != null" >
+        creatorUuid,
+      </if>
+      <if test="createdAt != null" >
+        createdAt,
+      </if>
+      <if test="updaterUuid != null" >
+        updaterUuid,
+      </if>
+      <if test="updatedAt != null" >
+        updatedAt,
+      </if>
+      <if test="assetSmallType != null" >
+        assetSmallType,
+      </if>
+      <if test="assetType != null" >
+        assetType,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="uuid != null" >
+        #{uuid,jdbcType=VARCHAR},
+      </if>
+      <if test="vendorUuid != null" >
+        #{vendorUuid,jdbcType=VARCHAR},
+      </if>
+      <if test="equipmentNo != null" >
+        #{equipmentNo,jdbcType=VARCHAR},
+      </if>
+      <if test="equipmentName != null" >
+        #{equipmentName,jdbcType=VARCHAR},
+      </if>
+      <if test="ratedCapacity != null" >
+        #{ratedCapacity,jdbcType=DOUBLE},
+      </if>
+      <if test="power != null" >
+        #{power,jdbcType=DOUBLE},
+      </if>
+      <if test="frequency != null" >
+        #{frequency,jdbcType=DOUBLE},
+      </if>
+      <if test="ratedVolt != null" >
+        #{ratedVolt,jdbcType=VARCHAR},
+      </if>
+      <if test="minOutVolt != null" >
+        #{minOutVolt,jdbcType=DOUBLE},
+      </if>
+      <if test="maxOutVolt != null" >
+        #{maxOutVolt,jdbcType=DOUBLE},
+      </if>
+      <if test="maxOutCurrent != null" >
+        #{maxOutCurrent,jdbcType=DOUBLE},
+      </if>
+      <if test="minOutCurrent != null" >
+        #{minOutCurrent,jdbcType=DOUBLE},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="isFlag != null" >
+        #{isFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="creatorUuid != null" >
+        #{creatorUuid,jdbcType=VARCHAR},
+      </if>
+      <if test="createdAt != null" >
+        #{createdAt,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updaterUuid != null" >
+        #{updaterUuid,jdbcType=VARCHAR},
+      </if>
+      <if test="updatedAt != null" >
+        #{updatedAt,jdbcType=TIMESTAMP},
+      </if>
+      <if test="assetSmallType != null" >
+        #{assetSmallType,jdbcType=VARCHAR},
+      </if>
+      <if test="assetType != null" >
+        #{assetType,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.demo.Gentity.Equipment" >
+    update base_equipment
+    <set >
+      <if test="vendorUuid != null" >
+        vendorUuid = #{vendorUuid,jdbcType=VARCHAR},
+      </if>
+      <if test="equipmentNo != null" >
+        equipmentNo = #{equipmentNo,jdbcType=VARCHAR},
+      </if>
+      <if test="equipmentName != null" >
+        equipmentName = #{equipmentName,jdbcType=VARCHAR},
+      </if>
+      <if test="ratedCapacity != null" >
+        ratedCapacity = #{ratedCapacity,jdbcType=DOUBLE},
+      </if>
+      <if test="power != null" >
+        power = #{power,jdbcType=DOUBLE},
+      </if>
+      <if test="frequency != null" >
+        frequency = #{frequency,jdbcType=DOUBLE},
+      </if>
+      <if test="ratedVolt != null" >
+        ratedVolt = #{ratedVolt,jdbcType=VARCHAR},
+      </if>
+      <if test="minOutVolt != null" >
+        minOutVolt = #{minOutVolt,jdbcType=DOUBLE},
+      </if>
+      <if test="maxOutVolt != null" >
+        maxOutVolt = #{maxOutVolt,jdbcType=DOUBLE},
+      </if>
+      <if test="maxOutCurrent != null" >
+        maxOutCurrent = #{maxOutCurrent,jdbcType=DOUBLE},
+      </if>
+      <if test="minOutCurrent != null" >
+        minOutCurrent = #{minOutCurrent,jdbcType=DOUBLE},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="isFlag != null" >
+        isFlag = #{isFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="creatorUuid != null" >
+        creatorUuid = #{creatorUuid,jdbcType=VARCHAR},
+      </if>
+      <if test="createdAt != null" >
+        createdAt = #{createdAt,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updaterUuid != null" >
+        updaterUuid = #{updaterUuid,jdbcType=VARCHAR},
+      </if>
+      <if test="updatedAt != null" >
+        updatedAt = #{updatedAt,jdbcType=TIMESTAMP},
+      </if>
+      <if test="assetSmallType != null" >
+        assetSmallType = #{assetSmallType,jdbcType=VARCHAR},
+      </if>
+      <if test="assetType != null" >
+        assetType = #{assetType,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where uuid = #{uuid,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.demo.Gentity.Equipment" >
+    update base_equipment
+    set vendorUuid = #{vendorUuid,jdbcType=VARCHAR},
+      equipmentNo = #{equipmentNo,jdbcType=VARCHAR},
+      equipmentName = #{equipmentName,jdbcType=VARCHAR},
+      ratedCapacity = #{ratedCapacity,jdbcType=DOUBLE},
+      power = #{power,jdbcType=DOUBLE},
+      frequency = #{frequency,jdbcType=DOUBLE},
+      ratedVolt = #{ratedVolt,jdbcType=VARCHAR},
+      minOutVolt = #{minOutVolt,jdbcType=DOUBLE},
+      maxOutVolt = #{maxOutVolt,jdbcType=DOUBLE},
+      maxOutCurrent = #{maxOutCurrent,jdbcType=DOUBLE},
+      minOutCurrent = #{minOutCurrent,jdbcType=DOUBLE},
+      status = #{status,jdbcType=INTEGER},
+      isFlag = #{isFlag,jdbcType=VARCHAR},
+      creatorUuid = #{creatorUuid,jdbcType=VARCHAR},
+      createdAt = #{createdAt,jdbcType=TIMESTAMP},
+      updaterUuid = #{updaterUuid,jdbcType=VARCHAR},
+      updatedAt = #{updatedAt,jdbcType=TIMESTAMP},
+      assetSmallType = #{assetSmallType,jdbcType=VARCHAR},
+      assetType = #{assetType,jdbcType=VARCHAR}
+    where uuid = #{uuid,jdbcType=VARCHAR}
+  </update>
+</mapper>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.demo.Mapper.appendixsMapper" >
+  <resultMap id="BaseResultMap" type="com.example.demo.Gentity.appendixs" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="formid" property="formid" jdbcType="VARCHAR" />
+    <result column="formType" property="formtype" jdbcType="VARCHAR" />
+    <result column="title" property="title" jdbcType="VARCHAR" />
+    <result column="path" property="path" jdbcType="VARCHAR" />
+    <result column="pages" property="pages" jdbcType="VARCHAR" />
+    <result column="size" property="size" jdbcType="VARCHAR" />
+    <result column="type" property="type" jdbcType="VARCHAR" />
+    <result column="createPerson" property="createperson" jdbcType="VARCHAR" />
+    <result column="createTime" property="createtime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, formid, formType, title, path, pages, size, type, createPerson, createTime
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from appendixs
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from appendixs
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.example.demo.Gentity.appendixs" >
+    insert into appendixs (id, formid, formType, 
+      title, path, pages, 
+      size, type, createPerson, 
+      createTime)
+    values (#{id,jdbcType=INTEGER}, #{formid,jdbcType=VARCHAR}, #{formtype,jdbcType=VARCHAR}, 
+      #{title,jdbcType=VARCHAR}, #{path,jdbcType=VARCHAR}, #{pages,jdbcType=VARCHAR}, 
+      #{size,jdbcType=VARCHAR}, #{type,jdbcType=VARCHAR}, #{createperson,jdbcType=VARCHAR}, 
+      #{createtime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.example.demo.Gentity.appendixs" >
+    insert into appendixs
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="formid != null" >
+        formid,
+      </if>
+      <if test="formtype != null" >
+        formType,
+      </if>
+      <if test="title != null" >
+        title,
+      </if>
+      <if test="path != null" >
+        path,
+      </if>
+      <if test="pages != null" >
+        pages,
+      </if>
+      <if test="size != null" >
+        size,
+      </if>
+      <if test="type != null" >
+        type,
+      </if>
+      <if test="createperson != null" >
+        createPerson,
+      </if>
+      <if test="createtime != null" >
+        createTime,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="formid != null" >
+        #{formid,jdbcType=VARCHAR},
+      </if>
+      <if test="formtype != null" >
+        #{formtype,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null" >
+        #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="path != null" >
+        #{path,jdbcType=VARCHAR},
+      </if>
+      <if test="pages != null" >
+        #{pages,jdbcType=VARCHAR},
+      </if>
+      <if test="size != null" >
+        #{size,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null" >
+        #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="createperson != null" >
+        #{createperson,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null" >
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.demo.Gentity.appendixs" >
+    update appendixs
+    <set >
+      <if test="formid != null" >
+        formid = #{formid,jdbcType=VARCHAR},
+      </if>
+      <if test="formtype != null" >
+        formType = #{formtype,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null" >
+        title = #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="path != null" >
+        path = #{path,jdbcType=VARCHAR},
+      </if>
+      <if test="pages != null" >
+        pages = #{pages,jdbcType=VARCHAR},
+      </if>
+      <if test="size != null" >
+        size = #{size,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null" >
+        type = #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="createperson != null" >
+        createPerson = #{createperson,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null" >
+        createTime = #{createtime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.demo.Gentity.appendixs" >
+    update appendixs
+    set formid = #{formid,jdbcType=VARCHAR},
+      formType = #{formtype,jdbcType=VARCHAR},
+      title = #{title,jdbcType=VARCHAR},
+      path = #{path,jdbcType=VARCHAR},
+      pages = #{pages,jdbcType=VARCHAR},
+      size = #{size,jdbcType=VARCHAR},
+      type = #{type,jdbcType=VARCHAR},
+      createPerson = #{createperson,jdbcType=VARCHAR},
+      createTime = #{createtime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

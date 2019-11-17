@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.demo.Mapper.WorkOrderTitleMapper" >
+  <resultMap id="BaseResultMap" type="com.example.demo.Gentity.WorkOrderTitle" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="work_order_no" property="workOrderNo" jdbcType="VARCHAR" />
+    <result column="station_name" property="stationName" jdbcType="VARCHAR" />
+    <result column="station_no" property="stationNo" jdbcType="VARCHAR" />
+    <result column="order_type" property="orderType" jdbcType="VARCHAR" />
+    <result column="processor" property="processor" jdbcType="VARCHAR" />
+    <result column="processor_phone" property="processorPhone" jdbcType="VARCHAR" />
+    <result column="processor_id" property="processorId" jdbcType="INTEGER" />
+    <result column="submitter" property="submitter" jdbcType="VARCHAR" />
+    <result column="submit_phone" property="submitPhone" jdbcType="VARCHAR" />
+    <result column="submit_id" property="submitId" jdbcType="INTEGER" />
+    <result column="tour_start_time" property="tourStartTime" jdbcType="TIMESTAMP" />
+    <result column="tour_remark" property="tourRemark" jdbcType="VARCHAR" />
+    <result column="tour_stop_time" property="tourStopTime" jdbcType="TIMESTAMP" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="status" property="status" jdbcType="TINYINT" />
+    <result column="total_num" property="totalNum" jdbcType="TINYINT" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="deleted" property="deleted" jdbcType="TINYINT" />
+    <result column="station_uuid" property="stationUuid" jdbcType="VARCHAR" />
+    <result column="approval_id" property="approvalId" jdbcType="INTEGER" />
+    <result column="approval_name" property="approvalName" jdbcType="VARCHAR" />
+    <result column="approval_time" property="approvalTime" jdbcType="TIMESTAMP" />
+    <result column="approval_phone" property="approvalPhone" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, work_order_no, station_name, station_no, order_type, processor, processor_phone, 
+    processor_id, submitter, submit_phone, submit_id, tour_start_time, tour_remark, tour_stop_time, 
+    create_time, status, total_num, update_time, deleted, station_uuid, approval_id, 
+    approval_name, approval_time, approval_phone
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from work_order_title
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from work_order_title
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.example.demo.Gentity.WorkOrderTitle" >
+    insert into work_order_title (id, work_order_no, station_name, 
+      station_no, order_type, processor, 
+      processor_phone, processor_id, submitter, 
+      submit_phone, submit_id, tour_start_time, 
+      tour_remark, tour_stop_time, create_time, 
+      status, total_num, update_time, 
+      deleted, station_uuid, approval_id, 
+      approval_name, approval_time, approval_phone
+      )
+    values (#{id,jdbcType=BIGINT}, #{workOrderNo,jdbcType=VARCHAR}, #{stationName,jdbcType=VARCHAR}, 
+      #{stationNo,jdbcType=VARCHAR}, #{orderType,jdbcType=VARCHAR}, #{processor,jdbcType=VARCHAR}, 
+      #{processorPhone,jdbcType=VARCHAR}, #{processorId,jdbcType=INTEGER}, #{submitter,jdbcType=VARCHAR}, 
+      #{submitPhone,jdbcType=VARCHAR}, #{submitId,jdbcType=INTEGER}, #{tourStartTime,jdbcType=TIMESTAMP}, 
+      #{tourRemark,jdbcType=VARCHAR}, #{tourStopTime,jdbcType=TIMESTAMP}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{status,jdbcType=TINYINT}, #{totalNum,jdbcType=TINYINT}, #{updateTime,jdbcType=TIMESTAMP}, 
+      #{deleted,jdbcType=TINYINT}, #{stationUuid,jdbcType=VARCHAR}, #{approvalId,jdbcType=INTEGER}, 
+      #{approvalName,jdbcType=VARCHAR}, #{approvalTime,jdbcType=TIMESTAMP}, #{approvalPhone,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.example.demo.Gentity.WorkOrderTitle" >
+    insert into work_order_title
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="workOrderNo != null" >
+        work_order_no,
+      </if>
+      <if test="stationName != null" >
+        station_name,
+      </if>
+      <if test="stationNo != null" >
+        station_no,
+      </if>
+      <if test="orderType != null" >
+        order_type,
+      </if>
+      <if test="processor != null" >
+        processor,
+      </if>
+      <if test="processorPhone != null" >
+        processor_phone,
+      </if>
+      <if test="processorId != null" >
+        processor_id,
+      </if>
+      <if test="submitter != null" >
+        submitter,
+      </if>
+      <if test="submitPhone != null" >
+        submit_phone,
+      </if>
+      <if test="submitId != null" >
+        submit_id,
+      </if>
+      <if test="tourStartTime != null" >
+        tour_start_time,
+      </if>
+      <if test="tourRemark != null" >
+        tour_remark,
+      </if>
+      <if test="tourStopTime != null" >
+        tour_stop_time,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+      <if test="totalNum != null" >
+        total_num,
+      </if>
+      <if test="updateTime != null" >
+        update_time,
+      </if>
+      <if test="deleted != null" >
+        deleted,
+      </if>
+      <if test="stationUuid != null" >
+        station_uuid,
+      </if>
+      <if test="approvalId != null" >
+        approval_id,
+      </if>
+      <if test="approvalName != null" >
+        approval_name,
+      </if>
+      <if test="approvalTime != null" >
+        approval_time,
+      </if>
+      <if test="approvalPhone != null" >
+        approval_phone,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="workOrderNo != null" >
+        #{workOrderNo,jdbcType=VARCHAR},
+      </if>
+      <if test="stationName != null" >
+        #{stationName,jdbcType=VARCHAR},
+      </if>
+      <if test="stationNo != null" >
+        #{stationNo,jdbcType=VARCHAR},
+      </if>
+      <if test="orderType != null" >
+        #{orderType,jdbcType=VARCHAR},
+      </if>
+      <if test="processor != null" >
+        #{processor,jdbcType=VARCHAR},
+      </if>
+      <if test="processorPhone != null" >
+        #{processorPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="processorId != null" >
+        #{processorId,jdbcType=INTEGER},
+      </if>
+      <if test="submitter != null" >
+        #{submitter,jdbcType=VARCHAR},
+      </if>
+      <if test="submitPhone != null" >
+        #{submitPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="submitId != null" >
+        #{submitId,jdbcType=INTEGER},
+      </if>
+      <if test="tourStartTime != null" >
+        #{tourStartTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="tourRemark != null" >
+        #{tourRemark,jdbcType=VARCHAR},
+      </if>
+      <if test="tourStopTime != null" >
+        #{tourStopTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=TINYINT},
+      </if>
+      <if test="totalNum != null" >
+        #{totalNum,jdbcType=TINYINT},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="deleted != null" >
+        #{deleted,jdbcType=TINYINT},
+      </if>
+      <if test="stationUuid != null" >
+        #{stationUuid,jdbcType=VARCHAR},
+      </if>
+      <if test="approvalId != null" >
+        #{approvalId,jdbcType=INTEGER},
+      </if>
+      <if test="approvalName != null" >
+        #{approvalName,jdbcType=VARCHAR},
+      </if>
+      <if test="approvalTime != null" >
+        #{approvalTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="approvalPhone != null" >
+        #{approvalPhone,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.demo.Gentity.WorkOrderTitle" >
+    update work_order_title
+    <set >
+      <if test="workOrderNo != null" >
+        work_order_no = #{workOrderNo,jdbcType=VARCHAR},
+      </if>
+      <if test="stationName != null" >
+        station_name = #{stationName,jdbcType=VARCHAR},
+      </if>
+      <if test="stationNo != null" >
+        station_no = #{stationNo,jdbcType=VARCHAR},
+      </if>
+      <if test="orderType != null" >
+        order_type = #{orderType,jdbcType=VARCHAR},
+      </if>
+      <if test="processor != null" >
+        processor = #{processor,jdbcType=VARCHAR},
+      </if>
+      <if test="processorPhone != null" >
+        processor_phone = #{processorPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="processorId != null" >
+        processor_id = #{processorId,jdbcType=INTEGER},
+      </if>
+      <if test="submitter != null" >
+        submitter = #{submitter,jdbcType=VARCHAR},
+      </if>
+      <if test="submitPhone != null" >
+        submit_phone = #{submitPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="submitId != null" >
+        submit_id = #{submitId,jdbcType=INTEGER},
+      </if>
+      <if test="tourStartTime != null" >
+        tour_start_time = #{tourStartTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="tourRemark != null" >
+        tour_remark = #{tourRemark,jdbcType=VARCHAR},
+      </if>
+      <if test="tourStopTime != null" >
+        tour_stop_time = #{tourStopTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=TINYINT},
+      </if>
+      <if test="totalNum != null" >
+        total_num = #{totalNum,jdbcType=TINYINT},
+      </if>
+      <if test="updateTime != null" >
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="deleted != null" >
+        deleted = #{deleted,jdbcType=TINYINT},
+      </if>
+      <if test="stationUuid != null" >
+        station_uuid = #{stationUuid,jdbcType=VARCHAR},
+      </if>
+      <if test="approvalId != null" >
+        approval_id = #{approvalId,jdbcType=INTEGER},
+      </if>
+      <if test="approvalName != null" >
+        approval_name = #{approvalName,jdbcType=VARCHAR},
+      </if>
+      <if test="approvalTime != null" >
+        approval_time = #{approvalTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="approvalPhone != null" >
+        approval_phone = #{approvalPhone,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.demo.Gentity.WorkOrderTitle" >
+    update work_order_title
+    set work_order_no = #{workOrderNo,jdbcType=VARCHAR},
+      station_name = #{stationName,jdbcType=VARCHAR},
+      station_no = #{stationNo,jdbcType=VARCHAR},
+      order_type = #{orderType,jdbcType=VARCHAR},
+      processor = #{processor,jdbcType=VARCHAR},
+      processor_phone = #{processorPhone,jdbcType=VARCHAR},
+      processor_id = #{processorId,jdbcType=INTEGER},
+      submitter = #{submitter,jdbcType=VARCHAR},
+      submit_phone = #{submitPhone,jdbcType=VARCHAR},
+      submit_id = #{submitId,jdbcType=INTEGER},
+      tour_start_time = #{tourStartTime,jdbcType=TIMESTAMP},
+      tour_remark = #{tourRemark,jdbcType=VARCHAR},
+      tour_stop_time = #{tourStopTime,jdbcType=TIMESTAMP},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      status = #{status,jdbcType=TINYINT},
+      total_num = #{totalNum,jdbcType=TINYINT},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      deleted = #{deleted,jdbcType=TINYINT},
+      station_uuid = #{stationUuid,jdbcType=VARCHAR},
+      approval_id = #{approvalId,jdbcType=INTEGER},
+      approval_name = #{approvalName,jdbcType=VARCHAR},
+      approval_time = #{approvalTime,jdbcType=TIMESTAMP},
+      approval_phone = #{approvalPhone,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

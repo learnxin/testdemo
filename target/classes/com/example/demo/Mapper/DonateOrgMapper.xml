@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.demo.Mapper.DonateOrgMapper" >
+  <resultMap id="BaseResultMap" type="com.example.demo.Gentity.DonateOrg" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="orgName" property="orgname" jdbcType="VARCHAR" />
+    <result column="initials" property="initials" jdbcType="VARCHAR" />
+    <result column="contacts" property="contacts" jdbcType="VARCHAR" />
+    <result column="relOrg" property="relorg" jdbcType="VARCHAR" />
+    <result column="legalBody" property="legalbody" jdbcType="VARCHAR" />
+    <result column="legalRepresentative" property="legalrepresentative" jdbcType="VARCHAR" />
+    <result column="contactNo" property="contactno" jdbcType="VARCHAR" />
+    <result column="area" property="area" jdbcType="INTEGER" />
+    <result column="address" property="address" jdbcType="VARCHAR" />
+    <result column="email" property="email" jdbcType="VARCHAR" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="createtime" property="createtime" jdbcType="TIMESTAMP" />
+    <result column="updatetime" property="updatetime" jdbcType="TIMESTAMP" />
+    <result column="deleted" property="deleted" jdbcType="BIT" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, orgName, initials, contacts, relOrg, legalBody, legalRepresentative, contactNo, 
+    area, address, email, remark, createtime, updatetime, deleted
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from pro_donate_organization
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from pro_donate_organization
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.example.demo.Gentity.DonateOrg" >
+    insert into pro_donate_organization (id, orgName, initials, 
+      contacts, relOrg, legalBody, 
+      legalRepresentative, contactNo, area, 
+      address, email, remark, 
+      createtime, updatetime, deleted
+      )
+    values (#{id,jdbcType=BIGINT}, #{orgname,jdbcType=VARCHAR}, #{initials,jdbcType=VARCHAR}, 
+      #{contacts,jdbcType=VARCHAR}, #{relorg,jdbcType=VARCHAR}, #{legalbody,jdbcType=VARCHAR}, 
+      #{legalrepresentative,jdbcType=VARCHAR}, #{contactno,jdbcType=VARCHAR}, #{area,jdbcType=INTEGER}, 
+      #{address,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}, 
+      #{createtime,jdbcType=TIMESTAMP}, #{updatetime,jdbcType=TIMESTAMP}, #{deleted,jdbcType=BIT}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.example.demo.Gentity.DonateOrg" >
+    insert into pro_donate_organization
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="orgname != null" >
+        orgName,
+      </if>
+      <if test="initials != null" >
+        initials,
+      </if>
+      <if test="contacts != null" >
+        contacts,
+      </if>
+      <if test="relorg != null" >
+        relOrg,
+      </if>
+      <if test="legalbody != null" >
+        legalBody,
+      </if>
+      <if test="legalrepresentative != null" >
+        legalRepresentative,
+      </if>
+      <if test="contactno != null" >
+        contactNo,
+      </if>
+      <if test="area != null" >
+        area,
+      </if>
+      <if test="address != null" >
+        address,
+      </if>
+      <if test="email != null" >
+        email,
+      </if>
+      <if test="remark != null" >
+        remark,
+      </if>
+      <if test="createtime != null" >
+        createtime,
+      </if>
+      <if test="updatetime != null" >
+        updatetime,
+      </if>
+      <if test="deleted != null" >
+        deleted,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="orgname != null" >
+        #{orgname,jdbcType=VARCHAR},
+      </if>
+      <if test="initials != null" >
+        #{initials,jdbcType=VARCHAR},
+      </if>
+      <if test="contacts != null" >
+        #{contacts,jdbcType=VARCHAR},
+      </if>
+      <if test="relorg != null" >
+        #{relorg,jdbcType=VARCHAR},
+      </if>
+      <if test="legalbody != null" >
+        #{legalbody,jdbcType=VARCHAR},
+      </if>
+      <if test="legalrepresentative != null" >
+        #{legalrepresentative,jdbcType=VARCHAR},
+      </if>
+      <if test="contactno != null" >
+        #{contactno,jdbcType=VARCHAR},
+      </if>
+      <if test="area != null" >
+        #{area,jdbcType=INTEGER},
+      </if>
+      <if test="address != null" >
+        #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null" >
+        #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null" >
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatetime != null" >
+        #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="deleted != null" >
+        #{deleted,jdbcType=BIT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.demo.Gentity.DonateOrg" >
+    update pro_donate_organization
+    <set >
+      <if test="orgname != null" >
+        orgName = #{orgname,jdbcType=VARCHAR},
+      </if>
+      <if test="initials != null" >
+        initials = #{initials,jdbcType=VARCHAR},
+      </if>
+      <if test="contacts != null" >
+        contacts = #{contacts,jdbcType=VARCHAR},
+      </if>
+      <if test="relorg != null" >
+        relOrg = #{relorg,jdbcType=VARCHAR},
+      </if>
+      <if test="legalbody != null" >
+        legalBody = #{legalbody,jdbcType=VARCHAR},
+      </if>
+      <if test="legalrepresentative != null" >
+        legalRepresentative = #{legalrepresentative,jdbcType=VARCHAR},
+      </if>
+      <if test="contactno != null" >
+        contactNo = #{contactno,jdbcType=VARCHAR},
+      </if>
+      <if test="area != null" >
+        area = #{area,jdbcType=INTEGER},
+      </if>
+      <if test="address != null" >
+        address = #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null" >
+        email = #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null" >
+        createtime = #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatetime != null" >
+        updatetime = #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="deleted != null" >
+        deleted = #{deleted,jdbcType=BIT},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.demo.Gentity.DonateOrg" >
+    update pro_donate_organization
+    set orgName = #{orgname,jdbcType=VARCHAR},
+      initials = #{initials,jdbcType=VARCHAR},
+      contacts = #{contacts,jdbcType=VARCHAR},
+      relOrg = #{relorg,jdbcType=VARCHAR},
+      legalBody = #{legalbody,jdbcType=VARCHAR},
+      legalRepresentative = #{legalrepresentative,jdbcType=VARCHAR},
+      contactNo = #{contactno,jdbcType=VARCHAR},
+      area = #{area,jdbcType=INTEGER},
+      address = #{address,jdbcType=VARCHAR},
+      email = #{email,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=VARCHAR},
+      createtime = #{createtime,jdbcType=TIMESTAMP},
+      updatetime = #{updatetime,jdbcType=TIMESTAMP},
+      deleted = #{deleted,jdbcType=BIT}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>
