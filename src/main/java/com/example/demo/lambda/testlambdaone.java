@@ -2,16 +2,27 @@ package com.example.demo.lambda;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
+import com.google.common.collect.Lists;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.collections.CollectionUtils;
 import org.junit.jupiter.api.Test;
+import org.springframework.util.DigestUtils;
 import org.springframework.util.StringUtils;
+import sun.security.provider.MD5;
 import sunbox.gateway.api.model.system.OperatorRespModel;
 
+import java.awt.print.Book;
 import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.function.Function;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import org.springframework.beans.BeanUtils;
+
+import static java.util.stream.Collectors.collectingAndThen;
+import static java.util.stream.Collectors.toCollection;
 
 @Slf4j
 public class testlambdaone {
@@ -70,18 +81,18 @@ public class testlambdaone {
 //                .collect(Collectors.toList());
 
 
-//        Map<Integer, Integer> collect = strings.stream()
-//                .map(o -> Integer.parseInt(o))
-//                .filter(o -> isPrime(o))
-////                .distinct()
-//                .collect(Collectors.groupingBy(o -> o, Collectors.summingInt(o -> 1)));
-
-
-        Integer collect = strings.stream()
+        Map<Integer, Integer> collect = strings.stream()
                 .map(Integer::parseInt)
                 .filter(this::isPrime)
-                .distinct()
-                .reduce(0, (x, y) -> x + y);
+//                .distinct()
+                .collect(Collectors.groupingBy(o -> o, Collectors.summingInt(o -> 1)));
+
+
+//        Integer collect = strings.stream()
+//                .map(Integer::parseInt)
+//                .filter(this::isPrime)
+//                .distinct()
+//                .reduce(0, (x, y) -> x + y);
         System.out.println(collect);
     }
 
@@ -108,6 +119,8 @@ public class testlambdaone {
 
     @Test
     public void testSkip(){
+        List<Integer> collect = Stream.iterate(1, x -> x + 1).limit(5)
+                .collect(Collectors.toList());
 //        Stream.of(arr1).skip(2).limit(2).forEach(System.out::println);
         Stream.iterate(1,x->x+2).skip(1).limit(5).forEach(System.out::println);
     }
@@ -115,19 +128,20 @@ public class testlambdaone {
     @Test
     public void testlist(){
         ArrayList<Person> peoples = new ArrayList<>();
-     peoples.add(new Person("00", 20, false));
-     peoples.add(new Person("01", 19, true));
+        peoples.add(new Person("00", 20, false));
+        peoples.add(new Person("01", 19, true));
+        Map<String, Person> collect = peoples.stream().collect(Collectors.toMap(Person::getName, person -> person));
+
+
         Object[] objects = peoples.stream()
-                .map(Person::getName)
-                .toArray();
+            .map(Person::getName)
+            .toArray();
         Stream<String> stringStream = peoples.stream()
-                .map(Person::getName);
+            .map(Person::getName);
         TreeSet<Person> people = new TreeSet<Person>(peoples);
-//        AtomicReference<String> test= new AtomicReference<>("");
-//     people.forEach(x->{
-//         test.updateAndGet(v -> v + x);
-//         System.out.println(test);
-//     });
+
+
+
 
     }
     @Test
@@ -155,7 +169,7 @@ public class testlambdaone {
         test.add("121244");
         test.add("1212");
         test.add("121233");
-
+        test.addAll(null);
         String s = jointList(test);
         System.out.println(s);
 //        String str="1233";
@@ -172,6 +186,9 @@ public class testlambdaone {
                 (key,value)->{
                     log.info("key：" + key + " value："
                             + value);
+                    if(key.equals("tes2")){
+                        return;
+                    }
                     map.put(key," 参数值："
                             + value);
                 }
@@ -191,6 +208,60 @@ public class testlambdaone {
         sb.append(list.get(offset));
 
         return sb.toString();
+    }
+
+    @Test
+    public void testString2Long(){
+//        List<VcVendorCertBase> vcVendorCertBases=new ArrayList<>();
+//        vcVendorCertBases.add(new VcVendorCertBase().setCertArea("1adda"));
+//        vcVendorCertBases.add(new VcVendorCertBase().setCertArea(null));
+//        vcVendorCertBases.add(new VcVendorCertBase().setCertArea("   "));
+//        vcVendorCertBases.add(new VcVendorCertBase().setCertArea("124"));
+//        Long[] longs = vcVendorCertBases.stream().map(VcVendorCertBase::getCertArea).filter(
+//                e -> org.apache.commons.lang3.StringUtils.isNotBlank(e) && org.apache.commons.lang3.StringUtils.isNumericSpace(e)
+//        ).map(Long::new).toArray(Long[]::new);
+//
+//        System.out.println(longs.toString());
+
+
+
+    }
+
+//    @Test
+////    public void sizeIsEmpty(){
+////        List<String> stringList=null;
+////        boolean b = CollectionUtils. (stringList);
+////        System.out.println(b);
+////    }
+    @Test
+    public void testDateCompare(){
+        List<Date> dates=new ArrayList<>();
+        Date t1 = new Date();
+        Date t2 = new Date();
+        int i = t1.compareTo(t2);
+
+        boolean before = t1.before(t2);
+        dates.add(t1);
+        dates.add(t2);
+        Optional<Date> min = dates.stream().min(Date::compareTo);
+        if(min.isPresent()){
+            Date date = min.get();
+        }
+
+
+
+    }
+
+
+    @Test
+    public void test1(){
+
+        String base = "10002111" +"1569558828449";
+        String md5 = DigestUtils.md5DigestAsHex(base.getBytes());
+        System.out.println(md5);
+
+        String s = UUID.randomUUID().toString().replaceAll("-","");
+        System.out.println(s);
     }
 
     @Test
@@ -253,7 +324,42 @@ public class testlambdaone {
 
     }
 
+    @Test
+    public void testV(){
+        Boolean flag=false;
+        Boolean flag1=false;
+        System.out.println(flag^flag1);
+    }
 
+    @Test
+    public void testUnique(){
+        List<Person> books = Lists.newArrayList(new Person("1",1,Boolean.FALSE)
+                ,new Person("2",2,Boolean.FALSE)
+                ,new Person("3",3,Boolean.FALSE)
+                ,new Person("2",2,Boolean.FALSE));
+
+        //使用TreeSet去重
+        List<Person> unique1 = books.stream().collect(
+                collectingAndThen(toCollection(() -> new TreeSet<>(Comparator.comparing(Person::getName))),
+                        ArrayList::new));
+
+        System.out.println(unique1);
+
+        //使用map去重
+        List<Person> unique2 = books.stream()
+                .filter(distinctByKey(Person::getName))
+                .collect(Collectors.toList());
+        System.out.println(unique2);
+
+    }
+
+
+
+    public static <T> Predicate<T> distinctByKey(Function<? super T, Object> keyExtractor) {
+        Map<Object, Boolean> seen = new ConcurrentHashMap<>();
+        System.out.println("这个函数将应用到每一个item");
+        return t -> seen.putIfAbsent(keyExtractor.apply(t), Boolean.TRUE) == null;
+    }
 
 
 }
