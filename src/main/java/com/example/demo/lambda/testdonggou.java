@@ -104,12 +104,14 @@ public class testdonggou {
         Person personson2 = new Person("yyf1", 1, true);
         Person personson3 = new Person("yyf2", 1, true);
         Person personson4 = new Person("0", 1, true);
+        Person personson5 = new Person("1", 1, true);
 
 
         List<Person> personList = new ArrayList<>();
         personList.add(personson2);
         personList.add(personson3);
         personList.add(personson4);
+        personList.add(personson5);
         List<Personson> personsonList = new ArrayList<>();
         personsonList.add(personson);
         toPackDataList(personsonList,Personson::getAge,personList,Person::getAge,Personson::setPersonList);
