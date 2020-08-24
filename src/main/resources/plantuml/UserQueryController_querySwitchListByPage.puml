@@ -1,0 +1,22 @@
+@startuml
+autonumber
+actor user
+participant cpm
+
+
+user-> cpm: rest request
+
+activate cpm
+
+cpm -> vendor_user_center : 分页查询ocj可切换用户
+cpm -> cpm :获取供应商用户名
+
+cpm -> vendor_user_center : 分页查询ocj可切换用户
+cpm -> cpm :组装出参
+return PageInfo<VcSwitchUser>
+deactivate cpm
+
+
+
+
+@enduml

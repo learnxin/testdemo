@@ -1,0 +1,37 @@
+@startuml
+autonumber
+actor user
+participant bom
+
+activate bom
+user-> bom: rest request合同审核通过
+bom->wf_center:调用审核通过接口
+note right : WorkflowCommandFacade#workflowCompleteTask \n 参数:流程实例ID,审批意见 \n 功能:工作流审核通过
+wf_center->bom: 返回调用结果
+
+alt 判断工作流是否结束
+    bom -> vendor_center :调用审核通过接口
+
+
+vendor_center -> vendor_center :修改合同审核状态为审核通过
+vendor_center -> vendor_center :更新工作流详情页面入参记录\n状态为通过vc_data_param_hist
+
+
+alt ContractType = 银行账号更改公函
+    vendor_center -> vendor_center :修改结算id对应的银行账号
+
+end
+
+    vendor_center -> bom : return
+
+end
+    bom -> user : result
+
+deactivate bom
+
+
+
+
+
+
+@enduml

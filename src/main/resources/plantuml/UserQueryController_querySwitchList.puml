@@ -1,0 +1,32 @@
+@startuml
+autonumber
+actor user
+participant cpm
+
+
+user-> cpm: rest request
+
+activate cpm
+alt UserType = VENDOR_USER
+cpm -> vendor_center : 根据companyId查询供应商
+
+    alt LinkYn = null 供应商没有开启关联
+    cpm -> user : empty list
+    end
+    cpm -> cpm :剔除掉未开启关联的供应商
+
+    cpm -> user : result list
+
+else UserType = OPERATOR_USER
+    cpm -> acl_center : 查询操作账号关联角色
+    cpm -> vendor_center : vendor_center
+    cpm -> cpm :出参转换
+    cpm -> user : result list
+end
+    cpm -> user : empty list
+deactivate cpm
+
+
+
+
+@enduml

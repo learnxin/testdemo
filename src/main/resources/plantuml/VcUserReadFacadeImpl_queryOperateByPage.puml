@@ -1,0 +1,42 @@
+@startuml
+autonumber
+actor user
+participant cpm
+
+user-> cpm: rest request
+activate cpm
+alt 没有传入角色id
+    cpm -> acl_center : 查询供应商创建的操作账号角色
+    cpm -> cpm : 获取角色id list
+else 传入了传入角色id
+    cpm -> cpm : 设置角色id
+end
+
+alt 是否获取到角色id list
+    cpm -> user : empty list
+
+end
+
+alt 角色id list is empty
+
+cpm -> vendor_user_center : 根据入参查询公司下操作账号
+cpm -> acl_center : 查询操作账号绑定角色
+cpm -> cpm : 处理出参
+cpm -> user : result list
+
+end
+cpm -> vendor_user_center : 根据入参查询公司下操作账号
+cpm -> acl_center : 根据操作账号ids 获取员工账号ids
+
+group 创建根据角色ids查询员工入参
+    cpm -> cpm : 设置员工ids
+    cpm -> cpm : 设置角色ids
+end
+
+cpm -> acl_center : 根据角色ids查询员工信息
+cpm -> acl_center : 查询操作账号绑定角色
+
+cpm -> cpm : 转换出参
+cpm -> user : result list
+deactivate cpm
+@enduml

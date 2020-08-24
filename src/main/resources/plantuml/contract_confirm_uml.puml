@@ -1,0 +1,48 @@
+@startuml
+autonumber
+actor user
+participant cpm
+
+
+user-> cpm: rest request合同确认人确认
+
+activate cpm
+
+
+vendor_center -> vendor_center :合同置为生效
+
+
+alt ContractType = tv单品合同
+
+    vendor_center -> mq : 推送tv货号合同审核通过的消息
+    note left : 消息体:(货号id,合同编号)
+else ContractType = ic合作模式合同
+    vendor_center -> vendor_center :存入正式品牌毛利率表
+else ContractType = 保证金补充协议
+
+    alt 普通保证金
+        vendor_center -> account_center : 存入保证金上报记录
+        note right : MarginRecordWriteFacade.nomalMarginApply \n 参数:NomalMarginApplyRpcCommand \n 功能:一般供应商保证金上报
+    else 旅游保证金
+        vendor_center -> account_center : 存入保证金上报记录
+        note right : MarginRecordWriteFacade.tourMarginApply \n 参数:TourMarginApplyRpcCommand \n 功能:旅游保证金上报
+    end
+
+    else ContractType = 全球购经销
+        vendor_center -> mq : 推送全球购经销合同内容
+        note right : 消息体:(合同编号,合同发生日期(yyyymmdd),\n结算id,供应商编号,公司编号,商品编号,合同日期,总金额（含税）\n,预付款金额,尾款,货币种类,合同种类,合同状态 )
+    else ContractType = 特殊账期合同
+
+        vendor_center -> vendor_center :待业务确认
+
+end
+
+    vendor_center -> cpm : return
+    cpm -> user : result
+
+deactivate cpm
+
+
+
+
+@enduml

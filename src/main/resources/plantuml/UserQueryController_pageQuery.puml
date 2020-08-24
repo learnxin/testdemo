@@ -1,0 +1,39 @@
+@startuml
+autonumber
+actor user
+participant cpm
+
+
+user-> cpm: rest request
+
+activate cpm
+
+alt UserType = OCJ_USER
+
+cpm -> cpm : 入参转换(username,status)
+cpm -> bom_uc : 查询用户分页信息
+activate bom_uc
+else UserType = VENDOR_USER
+cpm -> cpm : 校验venId和venName是否匹配
+    alt 供应商商id和名称不配配
+    cpm -> user
+    end
+cpm -> cpm : 入参转换(status,venIdList)
+cpm -> bom_uc : 查询用户分页信息
+end
+bom_uc --> cpm :用户分页信息
+deactivate bom_uc
+
+
+cpm -> sso : account信息信息&最后登录时间
+cpm -> vendor_user_center :查询更新人信息
+cpm -> vendor_center:查询供应商信息
+
+cpm -> cpm : 出参转换
+return response
+deactivate cpm
+
+
+
+
+@enduml

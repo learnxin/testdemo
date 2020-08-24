@@ -1,0 +1,44 @@
+@startuml
+autonumber
+actor user
+participant cpm
+
+
+user-> cpm: rest request提交合同
+
+activate cpm
+
+alt ContractType = tv单品合同
+
+
+    cpm -> item_center : 新增货号审核是否已过qc节点
+    note right : ItemnoReadFacade.queryItemNoPageList \n 参数:货号 \n 功能:货号列表-通用接口
+    item_center -> cpm :返回调用结果
+
+
+    alt 货号状态不对或qc节点没过
+        vendor_center -> cpm :throw 货号状态不对或qc节点没过
+        cpm ->  user :无法创建tv货号合同
+    end
+
+
+end
+    cpm -> vendor_center : 调用新增合同接口
+    vendor_center -> vendor_center :参数校验
+    vendor_center -> vendor_center :保存数据
+    cpm -> vendor_center : 根据条件查询工作流配置
+    note left : WfProcConfigReadFacade#queryWfProcConfig \n 参数:业务enum \n 功能:查询审批工作流配置参数
+
+    cpm -> cpm : 设置工作流启动参数
+    cpm -> wf_center : 调用启动工作流接口
+    note left : WorkflowCommandFacade#workflowStartProcess \n 参数:WorkflowStartRpcCommand \n 功能:根据businessKey，启动工作流相应流程
+    cpm -> vendor_center : 调用合同启动工作流成功接口
+    vendor_center -> cpm : return
+    cpm -> user : result
+
+deactivate cpm
+
+
+
+
+@enduml

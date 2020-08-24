@@ -1,0 +1,37 @@
+@startuml
+autonumber
+actor user
+participant cpm
+
+
+user-> cpm: rest request
+
+activate cpm
+
+alt OCJ用户
+    cpm -> user : empty list
+end
+
+alt UserType = 老OCJ用户 或 UserType = 操作用户
+
+    cpm -> cpm :通过用户id查询 setUserId
+
+else UserType = 合作伙伴
+
+    cpm -> cpm :通过供应商id查询
+
+end
+    cpm -> vendor_user_center : 批量查询老供应商用户信息
+    cpm -> cpm : 去除重复老供应商用户
+    cpm -> vendor_user_center : 查询用户名
+    loop
+         cpm -> cpm : 设置供应商用户名
+    end
+
+return result list
+deactivate cpm
+
+
+
+
+@enduml

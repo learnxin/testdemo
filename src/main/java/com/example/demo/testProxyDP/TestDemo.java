@@ -1,6 +1,10 @@
 package com.example.demo.testProxyDP;
 
+import org.apache.commons.lang3.StringUtils;
+import org.junit.jupiter.api.Test;
+
 import java.lang.reflect.Proxy;
+import java.util.Date;
 
 public class TestDemo {
     public static void main(String[] args) {
@@ -24,5 +28,28 @@ public class TestDemo {
             System.out.println("zzz");
         }
         System.out.println("owo");
+    }
+    @Test
+    public void  ossSize(){
+        String size = "e2a7c22b22184dc6a8fbb9cbb8023c8a.PNG";
+        System.out.println( size.length() );
+    }
+    @Test
+    public void newdate(){
+        Date date = new Date(1593483577861L);
+        Date date1 = new Date(1435803577861L);
+        System.out.printf(date+""+date1);
+    }
+
+    @Test
+    public void testand(){
+        Integer one = 1;
+        Integer two =2;
+        Integer three =2;
+        System.out.println(!one .equals(two));
+        System.out.println(!one .equals(two) && one.equals(three));
+        if(!one .equals(two) && one.equals(three)){
+            System.out.println(111);
+        }
     }
 }
