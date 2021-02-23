@@ -2,10 +2,11 @@ package com.example.demo.lambda;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.google.common.collect.Lists;
+//import com.google.common.collect.Lists;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.math.NumberUtils;
+import org.assertj.core.util.Lists;
 import org.junit.jupiter.api.Test;
 import org.springframework.util.DigestUtils;
 import sunbox.gateway.api.model.system.OperatorRespModel;
@@ -84,11 +85,11 @@ public class testlambdaone {
                 .collect(Collectors.groupingBy(o -> o, Collectors.summingInt(o -> 1)));
 
 
-//        Integer collect = strings.stream()
-//                .map(Integer::parseInt)
-//                .filter(this::isPrime)
-//                .distinct()
-//                .reduce(0, (x, y) -> x + y);
+        Integer ss = strings.stream()
+                .map(Integer::parseInt)
+                .filter(this::isPrime)
+                .distinct()
+                .reduce(0, (x, y) -> x + y);
         System.out.println(collect);
     }
 
@@ -118,8 +119,9 @@ public class testlambdaone {
         Stream<Integer> limit = Stream.iterate(1, x -> x + 1).limit(5);
         List<Integer> collect = limit
                 .collect(Collectors.toList());
-        limit.toArray(String[]::new);
-        limit.toArray(Long[]::new);
+        String[] strings = limit.toArray(String[]::new);
+        Integer[] integers = limit.toArray(Integer[]::new);
+        Long[] longs = limit.toArray(Long[]::new);
 //        Stream.of(arr1).skip(2).limit(2).forEach(System.out::println);
         Stream.iterate(1,x->x+2).skip(1).limit(5).forEach(System.out::println);
     }

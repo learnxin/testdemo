@@ -42,8 +42,16 @@ return 0;
     }
     @Test
     public void testNull2Json(){
-        String  str= "{\"uuid\":\"string\",\"extra\":{\"additionalProp1\":\"string\",\"additionalProp3\":\"string\",\"additionalProp2\":\"string\"},\"clientInfo\":{\"extra\":null,\"clientIp\":null,\"sourceApp\":\"bom\",\"userId\":\"10000018\",\"userName\":null},\"option\":null,\"id\":2,\"operId\":140065,\"write\":true,\"className\":\"cn.com.ocj.giant.center.vendor.api.dto.input.vcstore.command.WorkflowCallbackRpcCommand\"}";
+        String  str= "{\"success\":true,\"data\":[{\"id\":208071,\"createTime\":\"2019-12-20T16:12:57.000+0000\",\"updateTime\":\"2019-12-20T16:12:57.000+0000\",\"updateId\":\"9999998\",\"createId\":\"9999998\",\"deleteYn\":0,\"employeeNo\":\"105336\",\"name\":\"家柱贸易（上海）有限公司（I/C）\",\"mobile\":null,\"enabled\":1,\"email\":\"\",\"phone\":\"\",\"metaData\":null,\"userId\":208071,\"remark\":null},{\"id\":208327,\"createTime\":\"2019-12-20T16:12:57.000+0000\",\"updateTime\":\"2019-12-20T16:12:57.000+0000\",\"updateId\":\"9999998\",\"createId\":\"9999998\",\"deleteYn\":0,\"employeeNo\":\"107078\",\"name\":\"嘉兴崇海置业有限公司\",\"mobile\":null,\"enabled\":1,\"email\":\"\",\"phone\":\"\",\"metaData\":null,\"userId\":208327,\"remark\":null},{\"id\":128694,\"createTime\":\"2020-09-10T05:14:00.000+0000\",\"updateTime\":\"2020-09-10T05:14:00.000+0000\",\"updateId\":\"zhangts_increment \",\"createId\":\"zhangts_increment \",\"deleteYn\":0,\"employeeNo\":\"690866\",\"name\":\"陈黄栋\",\"mobile\":null,\"enabled\":1,\"email\":\"shaofu@alibaba-inc.com\",\"phone\":\"15005815457\",\"metaData\":null,\"userId\":10003032,\"remark\":null},{\"id\":1003034,\"createTime\":\"2020-06-24T10:01:16.000+0000\",\"updateTime\":\"2020-06-24T10:01:16.000+0000\",\"updateId\":\"10003032\",\"createId\":\"10003032\",\"deleteYn\":0,\"employeeNo\":\"zmyx001\",\"name\":\"zmyx001\",\"mobile\":null,\"enabled\":1,\"email\":null,\"phone\":\"13918206564\",\"metaData\":null,\"userId\":10003032,\"remark\":null},{\"id\":1003167,\"createTime\":\"2020-07-23T09:37:20.000+0000\",\"updateTime\":\"2020-07-23T09:37:20.000+0000\",\"updateId\":\"10003165\",\"createId\":\"10003165\",\"deleteYn\":0,\"employeeNo\":\"shcxlp001\",\"name\":\"shcxlp001\",\"mobile\":null,\"enabled\":1,\"email\":null,\"phone\":\"18516218581\",\"metaData\":null,\"userId\":10003165,\"remark\":null},{\"id\":1003326,\"createTime\":\"2020-08-22T13:50:52.000+0000\",\"updateTime\":\"2020-08-22T13:50:52.000+0000\",\"updateId\":\"10003324\",\"createId\":\"10003324\",\"deleteYn\":0,\"employeeNo\":\"shwm001\",\"name\":\"shwm001\",\"mobile\":null,\"enabled\":1,\"email\":null,\"phone\":\"18918577180\",\"metaData\":null,\"userId\":10003324,\"remark\":null},{\"id\":1003398,\"createTime\":\"2020-09-07T12:43:32.000+0000\",\"updateTime\":\"2020-09-07T12:43:32.000+0000\",\"updateId\":\"10003396\",\"createId\":\"10003396\",\"deleteYn\":0,\"employeeNo\":\"项上吉祥\",\"name\":\"项上吉祥\",\"mobile\":null,\"enabled\":1,\"email\":null,\"phone\":\"13915529322\",\"metaData\":null,\"userId\":10003396,\"remark\":null},{\"id\":1003482,\"createTime\":\"2020-09-15T07:41:26.000+0000\",\"updateTime\":\"2020-09-15T07:41:26.000+0000\",\"updateId\":\"10003525\",\"createId\":\"10003525\",\"deleteYn\":0,\"employeeNo\":\"13916914292\",\"name\":\"13916914292\",\"mobile\":null,\"enabled\":1,\"email\":null,\"phone\":\"13916914292\",\"metaData\":null,\"userId\":10003525,\"remark\":null},{\"id\":1003507,\"createTime\":\"2020-09-22T02:43:11.000+0000\",\"updateTime\":\"2020-09-22T02:43:11.000+0000\",\"updateId\":\"10003550\",\"createId\":\"10003550\",\"deleteYn\":0,\"employeeNo\":\"昆山和融房地产开发有限公司\",\"name\":\"昆山和融房地产开发有限公司\",\"mobile\":null,\"enabled\":1,\"email\":null,\"phone\":\"15995599668\",\"metaData\":null,\"userId\":10003550,\"remark\":null},{\"id\":1003509,\"createTime\":\"2020-09-22T03:29:39.000+0000\",\"updateTime\":\"2020-09-22T03:29:39.000+0000\",\"updateId\":\"10003552\",\"createId\":\"10003552\",\"deleteYn\":0,\"employeeNo\":\"米牛文化传媒（江苏）有限公司\",\"name\":\"米牛文化传媒（江苏）有限公司\",\"mobile\":null,\"enabled\":1,\"email\":null,\"phone\":\"13817860536\",\"metaData\":null,\"userId\":10003552,\"remark\":null},{\"id\":1003510,\"createTime\":\"2020-09-22T05:30:37.000+0000\",\"updateTime\":\"2020-09-22T05:30:37.000+0000\",\"updateId\":\"10003553\",\"createId\":\"10003553\",\"deleteYn\":0,\"employeeNo\":\"shyt001\",\"name\":\"shyt001\",\"mobile\":null,\"enabled\":1,\"email\":null,\"phone\":\"15802150309\",\"metaData\":null,\"userId\":10003553,\"remark\":null}],\"fail\":null}";
         String remove = StringUtils.remove(str, "\\");
+        System.out.println(remove);
+        System.out.println(JSON.toJSONString(null));
+    }
+
+    @Test
+    public void testnn2Json(){
+        String  str= "query ($context: RcLlsfContext!, $options: String!) {\\n  listRuProduct(context: $context, options: $options) {\\n    pagination {\\n      total\\n      totalPage\\n      pageSize\\n      currentPage\\n    }\\n    data {\\n      uuid\\n      orderUuid\\n      order {\\n        uuid\\n        orderType\\n        changeScene\\n      }\\n    }\\n  }\\n}\\n";
+        String remove = StringUtils.remove(str, "\\n");
         System.out.println(remove);
         System.out.println(JSON.toJSONString(null));
     }
@@ -211,5 +219,8 @@ return 0;
 
 
     }
-
+    @Test
+    public void test(){
+        System.out.println(false != true);
+    }
 }

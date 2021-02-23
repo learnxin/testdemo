@@ -26,7 +26,7 @@ public class SignUtil {
     }
 
     public static void main(String[] args) {
-        String sign = previewSign("AP2008I008");
+        String sign = previewSign("AP2009I007");
         System.out.printf(sign);
 
     }

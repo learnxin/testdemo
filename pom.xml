@@ -118,11 +118,6 @@
 			<artifactId>ddqc-middle-ground-provide-api</artifactId>
 			<version>1.0</version>
 		</dependency>
-		<dependency>
-			<artifactId>jwt</artifactId>
-			<groupId>com.ad</groupId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
 		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
 		<dependency>
 			<groupId>mysql</groupId>
