@@ -1,0 +1,51 @@
+@startuml
+title rediskey
+
+autonumber
+actor "其他中心" as oc
+participant "供应商中心" as vc
+participant "redis" as redis
+actor "供应商前台" as vuser
+
+activate vc
+oc -> vc : 推送起草合同mq消息
+note left of oc: groupId=GID_VENDOR \n topic=OCJ_VC_CONTRACT_CREATE
+alt Tag = TV单品合同
+vc -> vc : 根据货号生成rediskey
+note left of vc: ContractRedisKey:Itemno:${供应商id}:${合同模板id}:${货号}
+vc -> vc : 根据货号生成bindrediskey \n 供前台用户选择货号
+note left of vc: key= bind:${供应商id}:${合同模板id} value= set(${货号})
+else if Tag = 保证金补充协议
+vc -> redis : 记录待打开的类目
+note left of vc: list \n key= DepositCategroy:${供应商id} \n value = ${类目id} , ${合作模式}
+vc -> vc : 保证金合同过滤重复起草的key
+note left of vc: ContractRedisKey:Deposit:${供应商id}:${保证金业务名称}
+else if default
+vc -> vc : 通用合同过滤重复起草的key
+note left of vc: ContractRedisKey:Common:${合同类型}:${供应商id}
+end
+vc -> redis : 获取分布式锁
+note left of vc: Lock:key
+alt get
+vc -> redis : 校验rediskey是否存在
+alt 不存在
+activate redis
+vc -> redis : cacheManager.set(key, 0).expire(key, 1, TimeUnit.DAYS);
+
+vc -> mc: 发送起草合同站内信
+end
+end
+vuser -> mc :获取起草合同站内信
+vuser -> redis : redisCacheManager.getSet(key) 得到可使用的tv货号列表
+vuser -> vc: 起草前查询(包含类目应缴金额计算)
+deactivate redis
+vuser -> vc : 用户选择货号
+vuser -> vc : 起草合同
+
+...人员审核确认...
+
+vc -> vc : 执行合同生效后逻辑
+note left of vc: 1.删除重复判断的key \n 2.将合同数据发送MQ，以便于各合同下游操作 \ntopic =OCJ_VC_CONTRACT_COMPLETE\n 3.发送生效通知邮件
+
+
+@enduml

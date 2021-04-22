@@ -161,10 +161,10 @@ return 0;
         personsonList.add(personson3);
         personsonList.add(personson4);
         personsonList.add(personson6);
-        Stream<Person> personStream = Stream.of(personList, personsonList,null)/*.filter(Objects::nonNull)*/.flatMap(List::stream);
+        Stream<Person> personStream = Stream.of(personList, personsonList,null).filter(CollectionUtils::isNotEmpty).flatMap(List::stream);
 //        List<Person> personStream1 = personStream.filter(Objects::nonNull).distinct().collect(Collectors.toList());
 
-        List<Object> collect = personStream.filter(Objects::nonNull).distinct().collect(Collectors.toList());
+        List<Object> collect = personStream./*filter(Objects::nonNull).*/distinct().collect(Collectors.toList());
 
         personsonList.stream().distinct();
         System.out.println(collect);

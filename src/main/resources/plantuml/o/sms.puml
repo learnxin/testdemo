@@ -1,8 +1,10 @@
 @startuml
+title 短彩信
+
 autonumber
-participant bboss
+actor bboss
 participant 编排
-participant 核心网
+actor 核心网
 
 group bboss派单
 
@@ -18,13 +20,14 @@ note left : 携带token
 编排-> 核心网: 派发工单
 note left : 携带token
 编排-> bboss : 工单派发成功
-
+deactivate 编排
 
 end
 ...人员审核确认...
 group 核心网回复
 
 核心网-> 编排: 鉴权接口获取token
+activate 编排
 核心网-> 编排: 工单回复
 note right : 携带token
 编排->编排 : 鉴权
