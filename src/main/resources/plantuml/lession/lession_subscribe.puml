@@ -1,0 +1,41 @@
+@startuml
+title 课程订阅
+
+autonumber
+actor "前台系统" as cpm
+participant "供应商中心" as vc
+participant "数据库" as db
+participant "redis" as redis
+
+cpm -> vc: 订阅课程
+note left of cpm:trainDo 课程DO \n'num 增加/扣减名额'
+cpm -> cpm: 校验课程状态是否为已发布
+cpm -> cpm: getRedisKey()
+cpm -> cpm: getKey() 获取剩余名额
+alt scale == null
+cpm -> cpm:  Get过期时间
+alt 过期时间<0
+cpm -> cpm: throw exception
+end
+cpm -> cpm:  设置名额到redis
+end
+cpm -> redis: 从redis更新名额并返回更新之后的名额 atomicAddAndGet(key, num)
+alt scale < 0
+cpm -> cpm: atomicGetAndAdd(key, -num) \n throw VcRpcException
+end
+cpm -> cpm:  cacheManager.getLock
+
+group try
+cpm->cpm:// 尝试加锁\nboolean isLocked = lock.tryLock(500, 1000, TimeUnit.MILLISECONDS);\n//    加锁失败 返还名额 throw ex\n        if (!isLocked) {\n                         cacheManager.atomicGetAndAdd(key, -num);\n                         throw new VcRpcException(CommonResponseCode.LockFailure);\n                     }        \n                     // 更新课程剩余名额\n                     trainDo.setScale(scale);\n                     trainService.updateTrain(trainDo, clientInfo);
+
+group catch
+cpm -> cpm: 发生其他异常 返还名额 \n atomicGetAndAdd(key, -num);
+
+end
+
+group finally
+cpm -> cpm: lock.unLock();
+end
+end
+
+@enduml
