@@ -11,11 +11,13 @@ shop -> p: 产品查询
 activate p
 note left of shop: '产品编码 \n sku编码'
 
-p -> p:查询产品基本信息
+p -> p:根据产品编码查询产品基本信息
 alt 销售品
-p -> p: 查询规则关联的销售品信息
+p -> p: 查询销售品信息
 p -> p: 根据销售品上配置的item及展示比例计算实际展示item
 p -> p: 查询涉及的具体sku
+else 普通产品
+p -> p: 查询涉及sku
 end
 p -> p: 获取实际sku对应的价格信息
 p -> p: 查询可销售渠道
