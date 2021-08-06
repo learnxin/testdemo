@@ -1,0 +1,40 @@
+@startuml
+title 操作库存接口定义
+
+autonumber
+participant "订单中心" as vc
+participant "产品中心" as cpm
+participant "redis" as redis
+participant "数据库" as db
+
+vc -> cpm: 库存操作
+note left of cpm:锁定库存 \n 扣减库存 \n 还原库存
+cpm -> cpm: 校验产品是否可售
+cpm -> redis: getKey() 获取剩余缓存库存
+alt 缓存库存 == null
+cpm -> redis:  设置表中库存到redis
+end
+cpm -> redis: 从redis更新缓存库存并返回更新之后的库存(原子操作)
+alt 缓存库存 < 0
+cpm->cpm :throw Exception
+end
+
+group try
+'cpm->cpm:// 尝试加锁\nboolean isLocked = lock.tryLock(500, 1000, TimeUnit.MILLISECONDS);\n//    加锁失败 返还名额 throw ex\n        if (!isLocked) {\n                         cacheManager.atomicGetAndAdd(key, -num);\n                         throw new VcRpcException(CommonResponseCode.LockFailure);\n                     }        \n                     // 更新课程剩余名额\n                     trainDo.setScale(scale);\n                     trainService.updateTrain(trainDo, clientInfo);
+cpm->redis:尝试加锁
+alt 加锁失败
+cpm -> redis:返还缓存库存 \n throw Exception
+else 加锁成功
+cpm -> db :操作db库存数据
+end
+group catch
+cpm -> cpm: 发生其他异常 返还缓存库存;
+
+end
+
+group finally
+cpm -> cpm: 释放锁
+end
+end
+
+@enduml

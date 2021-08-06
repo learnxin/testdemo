@@ -1,0 +1,15 @@
+@startuml
+title 查询保险规则
+autonumber
+participant "shoppingX" as shop
+participant "产品中心" as p
+participant "产品规则库" as gzk
+
+shop -> p: 查询保险规则
+activate p
+note left of shop: '产品销售节点' \n '主购票流'\n '航班信息' \n '渠道'
+p --> gzk: 根据航班信息查询规则库
+p -> p: 查询规则关联的保险产品信息
+p -> p: 组装出参
+return
+@enduml

@@ -1,0 +1,18 @@
+@startuml
+title 产品校验接口实现
+autonumber
+participant "订单中心" as shop
+participant "产品中心" as p
+participant "产品规则库" as gzk
+
+shop -> p: 调用产品校验接口
+activate p
+p -> gzk: 根据规则id查规则库
+activate gzk
+gzk-> p: 规则信息\n 航班信息 \n 保险规则关联关系
+deactivate gzk
+p -> p: 比对航班，比对保险规则关联关系
+p -> p: 校验产品价格
+p -> p: 校验产品可销售库存
+return
+@enduml
