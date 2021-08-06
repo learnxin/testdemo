@@ -1,29 +1,26 @@
 @startuml
 'https://plantuml.com/sequence-diagram
-title 查询销售品
+title 产品查询接口
 autonumber
 
-
-participant "shoppingX" as shop
+participant "shoppingX/订单中心" as shop
 participant "产品中心" as p
 participant "产品规则库" as gzk
 
-shop -> p: 查询保险规则
+shop -> p: 产品查询
 activate p
-note left of shop: '产品销售节点' \n '主购票流'\n '航班信息' \n '渠道'
+note left of shop: '产品编码 \n sku编码'
 
-p->p: 根据航班信息计算停留时间、地区\n 出发地是否境内
-p --> gzk: 根据计算信息及接口入参查询产品规则库
+p -> p:查询产品基本信息
 alt 销售品
 p -> p: 查询规则关联的销售品信息
 p -> p: 根据销售品上配置的item及展示比例计算实际展示item
-else 单品
-p -> p :操作db库存数据
-else 组合商品
-p -> p: 查询item关联的实际打包的sku信息
+p -> p: 查询涉及的具体sku
 end
 p -> p: 获取实际sku对应的价格信息
-p -> p: 计算截止办理时间
+p -> p: 查询可销售渠道
+p -> p: 根据spu查询类目信息
+
 p -> p: 组装出参
 
 return

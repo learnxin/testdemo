@@ -6,13 +6,28 @@ participant "产品中心" as p
 participant "产品规则库" as gzk
 
 shop -> p: 调用产品校验接口
+note left of shop: '规则信息' \n '旅客信息'\n '航班信息' \n '其他产品字段'
 activate p
 p -> gzk: 根据规则id查规则库
 activate gzk
 gzk-> p: 规则信息\n 航班信息 \n 保险规则关联关系
 deactivate gzk
-p -> p: 比对航班，比对保险规则关联关系
-p -> p: 校验产品价格
-p -> p: 校验产品可销售库存
+group 校验规则
+ p -> p: 判断当前规则是否正常
+end
+group 校验旅客信息
+p -> p: 校验旅客类型与规则库旅客类型是否匹配
+p -> p: 根据旅客信息计算旅客年龄，校验匹配规则库的年龄区间
+end
+group 校验航班信息
+p -> p: 根据航班起落时间及时区得到截止办理时间
+p -> p: 与规则库截止办理时间匹配
+p -> p: 航班号是否为空
+end
+group 校验产品信息
+p -> p: 校验保险价格
+p -> p: 校验产品基本信息(包括产品名等)
+p -> p: 校验产品是否可售
+end
 return
 @enduml
