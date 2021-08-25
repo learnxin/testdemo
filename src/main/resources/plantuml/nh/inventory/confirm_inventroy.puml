@@ -1,0 +1,54 @@
+@startuml
+title 扣减库存接口定义
+
+autonumber
+participant "订单中心" as vc
+participant "产品中心" as cpm
+participant "redis" as redis
+participant "数据库" as db
+
+vc -> cpm: 库存操作
+note left of cpm:扣减库存 \nspringcloud接口调用/mq消息推送
+
+
+cpm -> cpm: 产品基础信息校验(是否可售、sku状态等)
+group  库存事件 = 扣减库存
+    alt 库存计数 = 没有预占
+        note right of cpm:类似运营直接扣减库存
+        cpm -> redis : 获取缓存可售库存
+            alt 缓存库存 == null
+            cpm -> db :查询db库存数据
+            cpm -> redis:  设置表中库存到redis \n 此处存放可销售库存(实物库存-锁定库存)
+            end
+            alt 扣减库存 > 可销售库存
+                cpm -> cpm : throw Exception
+            end
+
+    else 库存计数 = 有预占
+        cpm -> db : 查询前置事件(此处为锁定事件)
+        cpm -> cpm : 前置事件是否存在\n校验扣减数量是否与前置锁定事件数量一致
+    end
+
+
+end
+
+group try
+'cpm->cpm:// 尝试加锁\nboolean isLocked = lock.tryLock(500, 1000, TimeUnit.MILLISECONDS);\n//    加锁失败 返还名额 throw ex\n        if (!isLocked) {\n                         cacheManager.atomicGetAndAdd(key, -num);\n                         throw new VcRpcException(CommonResponseCode.LockFailure);\n                     }        \n                     // 更新课程剩余名额\n                     trainDo.setScale(scale);\n                     trainService.updateTrain(trainDo, clientInfo);
+cpm->redis:尝试加锁
+    alt 加锁失败
+        cpm -> redis:返还缓存库存 \n throw Exception
+    else 加锁成功
+        cpm -> db :操作db库存数据、记录库存事件
+        cpm -> vc :库存事件执行成功
+    end
+    group catch
+        cpm -> redis: 发生其他异常 返还缓存库存;
+        cpm -> mq : 推送'扣减库存事件'的补偿mq消息
+    end
+
+    group finally
+        cpm -> redis: 释放锁
+    end
+end
+
+@enduml
