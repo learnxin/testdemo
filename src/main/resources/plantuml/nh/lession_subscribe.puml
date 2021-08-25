@@ -9,16 +9,29 @@ participant "数据库" as db
 
 vc -> cpm: 库存操作
 note left of cpm:锁定库存 \n 扣减库存 \n 还原库存
+
+
 cpm -> cpm: 校验产品是否可售
+alt 库存事件 = 锁定库存
+
 cpm -> redis: getKey() 获取剩余缓存库存
 alt 缓存库存 == null
 cpm -> db :查询db库存数据
-cpm -> redis:  设置表中库存到redis
+cpm -> redis:  设置表中库存到redis \n 此处存放可销售库存(实物库存-锁定库存)
+end
+alt 缓存库存 <= 0
+cpm->cpm :throw Exception
 end
 cpm -> redis: 从redis更新缓存库存并返回更新之后的库存(原子操作)
 alt 缓存库存 < 0
 cpm -> redis: 缓存库存不足 返还库存
 cpm->cpm :throw Exception
+end
+else 库存事件 = 扣减库存
+cpm -> cpm : 校验扣减数量是否与前次锁定事件数量一致
+else 库存事件 = 还原库存
+cpm -> cpm : 校验扣减数量是否与前次扣减事件数量一致
+cpm -> redis: 还原缓存库存
 end
 
 group try
@@ -27,7 +40,8 @@ cpm->redis:尝试加锁
 alt 加锁失败
 cpm -> redis:返还缓存库存 \n throw Exception
 else 加锁成功
-cpm -> db :操作db库存数据
+cpm -> db :操作db库存数据、记录库存事件
+cpm -> vc :库存事件执行成功
 end
 group catch
 cpm -> cpm: 发生其他异常 返还缓存库存;
