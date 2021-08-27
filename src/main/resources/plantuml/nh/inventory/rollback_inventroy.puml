@@ -14,6 +14,9 @@ note left of cpm:还原库存 \nmq消息
 cpm -> cpm: 产品基础信息校验(是否可售、sku状态等)
 group 库存事件 = 还原库存
     cpm -> db : 查询前置事件
+    alt 前置事件校验失败
+    cpm -> vc : exception
+    end
     alt 还原锁定库存
         cpm -> cpm : 前置事件是否存在\n校验还原数量是否与前置锁定事件数量一致
         cpm -> redis: 还原缓存库存
@@ -34,12 +37,12 @@ group try
     end
     group catch
         cpm -> redis: 发生其他异常 返还缓存库存;
-
+        cpm -> mq : 推送'还原库存事件'的补偿mq消息
     end
 
     group finally
         cpm -> redis: 释放锁
-        cpm -> mq : 推送'还原库存事件'的补偿mq消息
+
     end
 end
 

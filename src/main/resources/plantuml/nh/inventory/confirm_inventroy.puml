@@ -23,7 +23,11 @@ group  库存事件 = 扣减库存
             alt 扣减库存 > 可销售库存
                 cpm -> cpm : throw Exception
             end
-
+            cpm -> redis: 从redis更新缓存库存并返回更新之后的库存(原子操作)
+            alt 缓存库存 < 0
+            cpm -> redis: 缓存库存不足 返还库存
+            cpm->cpm :throw Exception
+            end
     else 库存计数 = 有预占
         cpm -> db : 查询前置事件(此处为锁定事件)
         cpm -> cpm : 前置事件是否存在\n校验扣减数量是否与前置锁定事件数量一致

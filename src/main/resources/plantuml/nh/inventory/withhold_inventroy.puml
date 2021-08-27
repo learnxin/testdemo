@@ -18,10 +18,11 @@ cpm -> redis: getKey() 获取剩余缓存库存
 alt 缓存库存 == null
 cpm -> db :查询db库存数据
 cpm -> redis:  设置表中库存到redis \n 此处存放可销售库存(实际库存-锁定库存)
-end
-alt 缓存库存 <= 0
+else 缓存库存 <= 0
 cpm->cpm :throw Exception
 end
+
+
 cpm -> redis: 从redis更新缓存库存并返回更新之后的库存(原子操作)
 alt 缓存库存 < 0
 cpm -> redis: 缓存库存不足 返还库存
