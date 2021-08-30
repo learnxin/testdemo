@@ -15,7 +15,7 @@ cpm -> cpm: 产品基础信息校验(是否可售、sku状态等)
 group  库存事件 = 扣减库存
     alt 库存计数 = 没有预占
         note right of cpm:类似运营直接扣减库存
-        cpm -> redis : 获取缓存可售库存
+        cpm -> redis: getKey() 获取剩余缓存库存\n key:skuCode
             alt 缓存库存 == null
             cpm -> db :查询db库存数据
             cpm -> redis:  设置表中库存到redis \n 此处存放可销售库存(实物库存-锁定库存)
@@ -38,7 +38,7 @@ end
 
 group try
 'cpm->cpm:// 尝试加锁\nboolean isLocked = lock.tryLock(500, 1000, TimeUnit.MILLISECONDS);\n//    加锁失败 返还名额 throw ex\n        if (!isLocked) {\n                         cacheManager.atomicGetAndAdd(key, -num);\n                         throw new VcRpcException(CommonResponseCode.LockFailure);\n                     }        \n                     // 更新课程剩余名额\n                     trainDo.setScale(scale);\n                     trainService.updateTrain(trainDo, clientInfo);
-cpm->redis:尝试加锁
+cpm->redis:尝试加锁 \n key:inventory 表主键
     alt 加锁失败
         cpm -> redis:返还缓存库存 \n throw Exception
     else 加锁成功
