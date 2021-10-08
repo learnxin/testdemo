@@ -1,0 +1,70 @@
+@startuml
+'https://plantuml.com/class-diagram
+title 出入参类图
+interface Serializable {
+}
+
+interface Transferable extends Serializable {
+    default String indentAndExcludeEmptyFieldsJson()
+    default String indentAndIncludeEmptyFieldsJson()
+}
+
+interface Believable {
+    void checkInput();
+}
+note right of Believable::checkInput
+  定义入参checkInput方法
+end note
+interface Input extends Transferable, Believable {
+}
+
+abstract class AbstractRequest implements Input {
+private String uuid;
+private Map<String, String> extra;
+}
+
+abstract class AbstractRestRequest extends AbstractRequest {
+ClientParam client;
+UserParam user;
+}
+note top of AbstractRestRequest
+  引入请求需要的client对象和user对象
+end note
+abstract class AbstractCommandRestRequest extends AbstractRestRequest implements Writeable {
+}
+note left of Writeable:根据接口判断读写请求
+note left of AbstractCommandRestRequest  #pink: 公共入参父类\n所有操作(command)需要继承
+
+abstract class AbstractQueryRestRequest extends AbstractRestRequest implements Readable {
+}
+note top of Readable:根据接口判断读写请求
+note left of AbstractQueryRestRequest  #pink: 公共入参父类\n所有操作(query)需要继承
+class StockPreDeductionInput extends AbstractCommandRestRequest {
+    private String orderCode;
+    private String itemCode;
+    private String skuCode;
+    private String quantity;
+    private String channel;
+}
+
+class AbstractPageQueryRestRequest extends AbstractQueryRestRequest{
+    private PageParam page;
+}
+
+note left of StockPreDeductionInput  #pink: 此处以预占库存接口入参为例
+interface Output extends Transferable {
+}
+
+class AbstractOutputInfo implements Output {
+private Map<String, String> extra;
+}
+note right of AbstractOutputInfo #pink: 公共出参父类\n所有出参需要继承
+class StockWebOutput extends AbstractOutputInfo{
+    private String checkResult;
+    private String checkMessage;
+    private String orderCode;
+    private String stockLogId;
+
+}
+note right of StockWebOutput  #pink: 此处以库存出参为例
+@enduml

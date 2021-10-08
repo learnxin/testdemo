@@ -1,0 +1,93 @@
+@startuml
+'https://plantuml.com/class-diagram
+title 核心类图及调用关系:以库存对外接口为例
+package api {
+    interface WebStockAPIService {
+        @ApiOperation(value = "库存还原压测")
+        RestResponse<StockWebOutput> recoverStockTest(StockRecoverInput request);
+    }
+}
+
+package http-client {
+    interface WebStockAPIHttp extends WebStockAPIService {
+        @RequestMapping(value = "/recoverStockTest", method = RequestMethod.POST)
+        RestResponse<StockWebOutput> recoverStockTest(StockRecoverInput request);
+    }
+}
+
+package infrastructure {
+    class WebStockController implements WebStockAPIHttp {
+    private WebStockAppService webStockAppService;
+    }
+    class WebStockMyBatisRepository implements domain.WebStockRepository {
+        private WebStockMapper webStockMapper;
+
+        private IcStockLogMapper icStockLogMapper;
+    }
+    note top of WebStockMyBatisRepository: 持久层的实现
+}
+
+package application {
+    class WebStockAppService {
+    private WebStockDomainService webStockDomainService;
+    RestResponse<StockWebOutput> recoverStock(StockRecoverInput request);
+    }
+}
+
+
+package domain {
+    class WebStockDomainService {
+    private TradeActionChain actionChain;
+    StockWebOutputVO tradeRequest(TradeStockContext actionContext);
+    }
+    note top of WebStockDomainService: 库存核心逻辑
+    class TradeActionChain {
+
+        WebStockCheckProxy webStockCheckProxy;
+        WebStockConstructProxy constructProxy;
+        WebStockRepositoryProxy repositoryProxy;
+        ActionResult execute(TradeStockContext actionContext);
+    }
+    note top of TradeActionChain: 库存流转链路
+    class WebStockRepositoryProxy {
+        WebStockRepository webStockRepository;
+        void execute(TradeStockContext context);
+    }
+    note top of WebStockRepositoryProxy: 库存对外接口持久化代理
+    interface WebStockRepository {
+    }
+    note top of WebStockRepository: 持久层的接口的定义
+}
+
+note top of api
+  api模块定义了微服务和外界交互的API的入参，出参和返回，除了lombok，
+  ，这里没有其他三方依赖。
+end note
+
+note top of http-client
+  这个模块依赖[api]模块，用于实现不同的客户端。
+  例如本例中是feign client。
+end note
+
+note left of application
+  应用层，依赖domain和api模块，实现对多个domain的服务编排，安全和事务的控制，
+  和一些和独立的domain无关的逻辑。
+  应用层也依赖spring的AOP和TX，profile，security，transaction都应该实现在这里。
+end note
+
+note top of domain
+  域服务。我们的核心业务逻辑。该模块除了一些工具类，不依赖任何其他三方库。
+  这个特点使我们非常容易地进行单元测试。
+  同时，该层通过面向接口，抽象了对数据库，消息，http等的访问。
+end note
+
+note top of infrastructure
+  实现了feign client中定义的接口，所以该模块依赖了[http-client]。
+end note
+
+WebStockAppService *-- WebStockController: 包含
+domain.WebStockDomainService *-- WebStockAppService : 包含
+domain.TradeActionChain *-- domain.WebStockDomainService : 包含
+domain.WebStockRepositoryProxy *--  domain.TradeActionChain: 包含
+WebStockMyBatisRepository *-- domain.WebStockRepositoryProxy: 包含
+@enduml
