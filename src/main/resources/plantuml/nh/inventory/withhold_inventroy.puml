@@ -32,21 +32,25 @@ end
 
 group try
 'cpm->cpm:// 尝试加锁\nboolean isLocked = lock.tryLock(500, 1000, TimeUnit.MILLISECONDS);\n//    加锁失败 返还名额 throw ex\n        if (!isLocked) {\n                         cacheManager.atomicGetAndAdd(key, -num);\n                         throw new VcRpcException(CommonResponseCode.LockFailure);\n                     }        \n                     // 更新课程剩余名额\n                     trainDo.setScale(scale);\n                     trainService.updateTrain(trainDo, clientInfo);
-cpm->redis:尝试加锁 \n key:inventory 表主键 trySet
-alt 加锁失败
-cpm -> redis:返还缓存库存 \n throw Exception
-else 加锁成功
-cpm -> db :操作db库存数据、记录库存事件
-cpm -> vc :库存事件执行成功
-end
-group catch
-cpm -> redis: 发生其他异常 返还缓存库存;
+'cpm->redis:尝试加锁 \n key:inventory 表主键 trySet
+'alt 加锁失败
+'cpm -> redis:返还缓存库存 \n throw Exception
+'else 加锁成功
+'cpm -> db :操作db库存数据、记录库存事件
+'cpm -> vc :库存事件执行成功
+'end
+cpm->db :记录库存单据
+cpm->mq:推送mq消息
+cpm->vc:库存下单成功
+    group catch
+    cpm -> redis: 发生其他异常 返还缓存库存;
 
+    end
+
+'group finally
+'cpm -> redis: 释放锁
+'end
 end
 
-group finally
-cpm -> redis: 释放锁
-end
-end
 
 @enduml

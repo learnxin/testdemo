@@ -5,32 +5,34 @@ title 库存执行异步链路
 autonumber
 participant "mq" as vc
 participant "产品中心" as cpm
-participant "redis" as redis
+'participant "redis" as redis
 participant "数据库" as db
-vc -> cpm :mq库存异步链路消息
+vc -> cpm :mq库存异步链路消息/定时任务执行
 note left of cpm:扣减库存 context:uniqueID\nneedRoolback(是否需要回滚缓存标识等)
 group try
 'cpm->cpm:// 尝试加锁\nboolean isLocked = lock.tryLock(500, 1000, TimeUnit.MILLISECONDS);\n//    加锁失败 返还名额 throw ex\n        if (!isLocked) {\n                         cacheManager.atomicGetAndAdd(key, -num);\n                         throw new VcRpcException(CommonResponseCode.LockFailure);\n                     }        \n                     // 更新课程剩余名额\n                     trainDo.setScale(scale);\n                     trainService.updateTrain(trainDo, clientInfo);
-    loop 加锁
-        cpm->redis:尝试加锁 \n key:inventory 表主键
-        alt 加锁失败
-            cpm -> cpm:sleep 100ms
-        end
-    end
-    alt 加锁成功
-        cpm -> db :操作db库存数据、记录库存事件
-        cpm -> vc :库存事件执行成功 推送mq消息
-    end
+'    loop 加锁
+'        cpm->redis:尝试加锁 \n key:inventory 表主键
+'        alt 加锁失败
+'            cpm -> cpm:sleep 100ms
+'        end
+'    end
+'    alt 加锁成功
+        cpm -> db :操作db库存数据
+        cpm -> db :更新库存单执行结果
+        note left of cpm: 使用数据库乐观锁，version防止出现aba的问题
+'    end
     group catch
-        alt needRoolback
-            cpm -> redis: 发生其他异常 返还缓存库存;
-        end
-        cpm -> cpm :记录执行失败库存单?
-        cpm -> vc : 推送'扣减库存事件失败'的mq消息
+        note left of cpm: 数据库同步失败，定时任务重试/推送mq消息重试
+'        alt needRoolback
+'            cpm -> redis: 发生其他异常 返还缓存库存;
+'        end
+'        cpm -> cpm :记录执行失败库存单?
+'        cpm -> vc : 推送'扣减库存事件失败'的mq消息
     end
 
-    group finally
-        cpm -> redis: 释放锁
-    end
+'    group finally
+'        cpm -> redis: 释放锁
+'    end
 end
 @enduml
