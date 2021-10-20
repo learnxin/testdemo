@@ -113,16 +113,11 @@
 			<artifactId>lombok</artifactId>
 			<version>1.16.22</version>
 		</dependency>
-		<dependency>
-			<groupId>com.ddqc</groupId>
-			<artifactId>ddqc-middle-ground-provide-api</artifactId>
-			<version>1.0</version>
-		</dependency>
 		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<version>5.1.46</version>
+			<version>8.0.16</version>
 		</dependency>
         <dependency>
             <groupId>junit</groupId>
