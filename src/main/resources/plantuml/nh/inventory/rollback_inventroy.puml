@@ -19,11 +19,19 @@ group 库存事件 = 还原库存
     end
     alt 还原锁定库存
         cpm -> cpm : 前置事件是否存在\n校验还原数量是否与前置锁定事件数量一致
-        cpm -> redis: 还原缓存库存
-    else 还远实际库存
+
+    else 还原实际库存
         cpm -> cpm : 前置事件是否存在\n校验还原数量是否与前置扣减事件数量一致
-        cpm -> redis: 还原缓存库存
+
     end
+
+    cpm -> redis: getKey() 获取剩余缓存库存\n key:skuCode \n atomicGet
+    alt 缓存库存 == null
+    cpm -> db :查询db库存数据
+    cpm -> redis:  设置表中库存到redis \n 此处存放可销售库存(实际库存-锁定库存) \n trySet
+    end
+
+    cpm -> redis: 还原缓存库存
 end
 
 'group try
