@@ -5,11 +5,17 @@ import org.junit.jupiter.api.Test;
 
 import java.lang.reflect.Proxy;
 import java.util.Date;
+import java.util.regex.Pattern;
 
 public class TestDemo {
     public static void main(String[] args) {
-        TestDemo testDemo = new TestDemo();
-        testDemo.test();
+//        TestDemo testDemo = new TestDemo();
+//        testDemo.test();
+//        String pattern = "[a-z0-9\\-._~%!$&'()*+,;=:@/]*";
+        String pattern = "/[a-zA-Z0-9\\&%_\\./-~-#]*";
+        String content = "/index.html#/combinateItem";
+        boolean matches = Pattern.matches(pattern, content);
+        System.out.println(matches);
 
     }
     public PersonBean getOwnProxy(PersonBean personBean){
@@ -51,5 +57,10 @@ public class TestDemo {
         if(!one .equals(two) && one.equals(three)){
             System.out.println(111);
         }
+    }
+
+    @Test
+    public void testMacth(){
+
     }
 }

@@ -1,0 +1,11 @@
+@startuml
+title svc现状
+autonumber
+participant "应用" as app
+database "oracle" as old
+database "自建mysql" as new
+app -> old : 写入
+old -> new : 同步任务同步增量数据
+app -> new : 应用查询
+
+@enduml

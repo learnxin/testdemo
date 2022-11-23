@@ -1,0 +1,23 @@
+@startuml
+title 标签库全量迁移前不停机(停机时间短，步骤相对多)
+
+autonumber
+participant "应用" as app
+database "老DB(自建mysql)" as old
+database "新DB(RDS)" as new
+old -> new : mysql全量迁移rds
+new -> new : 全量稽核数据
+old -> new : 开始增量迁移
+note left of app:等待数据迁移任务的进度变更为增量迁移\n并显示为无延迟状态或延迟时间低于5秒
+app ->x old : 业务暂时中断，禁止新的数据写入源数据库
+old -> old : 查看会话信息，确保没有新的会话执行写入操作
+new -> new : 增量稽核数据
+note left of new:等待移任务的增量迁移再次进入无延迟状态，保持1分钟或以上
+old ->x new : 停止增量迁移
+new -> old : 开启rds到mysql的增量同步任务
+old -> old : 增量同步验证
+app -> new :连接RDS,业务继续
+
+app -> app :业务回归
+
+@enduml

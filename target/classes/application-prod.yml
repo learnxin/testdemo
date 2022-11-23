@@ -1,7 +1,0 @@
-server:
-  port: 8082
-  context-path: /rua
-girl:
-  cupsize: C
-  age: 18
-  height: 175

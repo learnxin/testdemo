@@ -1,9 +1,6 @@
 package com.example.demo.lambda;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 @AllArgsConstructor
 @Getter
@@ -12,6 +9,10 @@ public class Person {
     private String name;
     private int age;
     private  Boolean weeking;
+
+    public Person(int age) {
+        this.age = age;
+    }
 
     @Override
     public boolean equals(Object obj) {

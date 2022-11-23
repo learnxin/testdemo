@@ -1,0 +1,14 @@
+@startuml
+title svc迁移
+autonumber
+participant "应用" as app
+database "老DB(自建oracle)" as old
+database "新DB(RDS)" as new
+old -> new : oracle全量同步rds
+old -> new : oracle增量同步rds
+note left of new:等待数据迁移任务的进度变更为增量迁移\n并显示为无延迟状态或延迟时间低于5秒
+new -> new : 稽核数据(数量及业务稽核)
+app -> new :连接RDS
+note left of app #FFAAAA: 应用灰度发布过程中会出现mysql与RDS同时被读的情况\n考虑数据延时造成的影响
+app -> app :业务回归
+@enduml

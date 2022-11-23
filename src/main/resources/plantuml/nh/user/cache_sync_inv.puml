@@ -1,0 +1,29 @@
+@startuml
+'https://plantuml.com/class-diagram
+title 定时校准库存缓存
+autonumber
+participant "产品中心" as item
+participant "redis" as redis
+participant "数据库" as db
+
+note left of item:暂定定时任务执行频率为 \n每日一次(1:30 AM)
+
+item -> db: 分页查询前一日00:00~24:00的库存单，获取skuCode
+    loop
+        item -> db: 根据skuCode查询对应库存记录
+        item -> redis :根据skuCode查询对应缓存可售库存
+        item -> item : 计算并对照db与redis可售库存数量
+        alt db != redis
+            item -> db: 查询库存单记录
+            alt 有库存单没同步
+              item -> item : 基于没同步的库存单重新计算可售库存
+              alt 计算结果 != redis
+                item -> redis : warn 并同步db可售库存到缓存
+              end
+            else 所有库存单已同步
+              item -> redis : warn 并同步db可售库存到缓存
+            end
+        end
+    end
+
+@enduml

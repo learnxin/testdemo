@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    run: backend
+    app: product
+  name: backend-deploy
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      run: backend
+  strategy: { }
+  template:
+    metadata:
+      labels:
+        run: backend
+    spec:
+      containers:
+        - image: cr.registry.ext.y.csair.com/test/csait_product_center:13-149
+          name: product-springboot
+          resources: { }
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend-service
+  labels:
+    app: product
+  annotations:
+    service.beta.kubernetes.io/alibaba-cloud-loadbalancer-address-type: "intranet"
+spec:
+  type: LoadBalancer
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: 9090
+  selector:
+    run: backend

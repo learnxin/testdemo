@@ -1,0 +1,18 @@
+@startuml
+title svc，Oracle同步任务切换
+
+autonumber
+participant "同步任务" as app
+database "老DB(自建mysql)" as old
+database "新DB(RDS)" as new
+app ->x old : 任务暂时中断，禁止新的数据写入源数据库
+old -> old : 查看会话信息，确保没有新的会话执行写入操作
+
+note left of new:等待移任务的增量迁移再次进入无延迟状态，保持1分钟或以上
+old ->x new : 停止增量迁移
+
+app -> new :任务直接同步数据到RDS
+
+note left of app #FFAAAA: 任务切换窗口可能有部分Oracle数据未同步到RDS\n考虑Oracle同步程序是否可以按时间设置同步位点
+
+@enduml

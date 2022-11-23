@@ -2,14 +2,12 @@ package com.example.demo.lambda;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-//import com.google.common.collect.Lists;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.math.NumberUtils;
 import org.assertj.core.util.Lists;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.springframework.util.DigestUtils;
-import sunbox.gateway.api.model.system.OperatorRespModel;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
@@ -18,8 +16,9 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import static java.util.stream.Collectors.collectingAndThen;
-import static java.util.stream.Collectors.toCollection;
+import static java.util.stream.Collectors.*;
+
+//import com.google.common.collect.Lists;
 
 @Slf4j
 public class testlambdaone {
@@ -117,8 +116,9 @@ public class testlambdaone {
     @Test
     public void testSkip(){
         Stream<Integer> limit = Stream.iterate(1, x -> x + 1).limit(5);
-        List<Integer> collect = limit
-                .collect(Collectors.toList());
+//        List<Integer> collect = limit
+//                .collect(Collectors.toList());
+        String collect1 = limit.map(String::valueOf).collect(joining(","));
         String[] strings = limit.toArray(String[]::new);
         Integer[] integers = limit.toArray(Integer[]::new);
         Long[] longs = limit.toArray(Long[]::new);
@@ -171,7 +171,7 @@ public class testlambdaone {
     }
 
     @Test
-    void testContainArray(){
+    public void testContainArray(){
         Integer[] ints={3,10,11};
         List<Integer> integers = Arrays.asList(ints);
         Integer i=21;
@@ -296,11 +296,11 @@ public class testlambdaone {
 
     @Test
     public void test(){
-        OperatorRespModel operatorRespModel = new OperatorRespModel();
-        JSONObject jsonObject = JSON.parseObject(JSON.toJSONString(operatorRespModel));
+//        OperatorRespModel operatorRespModel = new OperatorRespModel();
+//        JSONObject jsonObject = JSON.parseObject(JSON.toJSONString(operatorRespModel));
 //        com.ad.platform.kedong.vo.OperatorRespModel operatorRespModel1 = (com.ad.platform.kedong.vo.OperatorRespModel) operatorRespModel;\
-        Map map=(Map<String,Object>)operatorRespModel;
-        System.out.println(map);
+//        Map map=(Map<String,Object>)operatorRespModel;
+//        System.out.println(map);
 
     }
     @Test
@@ -366,7 +366,7 @@ public class testlambdaone {
         List<Person> unique1 = books.stream().filter(e->StringUtils.isNotBlank(e.getName())) .collect(
                 collectingAndThen(toCollection(() -> new TreeSet<>(Comparator.comparing(Person::getName))),
                         ArrayList::new));
-
+        Comparator<Person> personComparator = Comparator.comparingInt(Person::getAge);
         Comparator<Person> comparator1=Comparator.comparing(Person::getName);
         Comparator<Person> comparator=(o1,o2)->{
 

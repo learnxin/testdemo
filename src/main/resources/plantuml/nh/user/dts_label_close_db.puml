@@ -1,0 +1,15 @@
+@startuml
+title 标签库全量迁移前停机
+autonumber
+participant "应用" as app
+database "老DB(自建mysql)" as old
+database "新DB(RDS)" as new
+note left of app: 时间窗口长\n过程简单
+app ->x old : 业务暂时中断，禁止新的数据写入源数据库
+old -> new : mysql全量迁移rds/整库备份迁移
+new -> new : 稽核数据(数量及业务稽核)
+new -> old : 开启rds到mysql的增量同步任务
+old -> old : 增量同步验证
+app -> new :连接RDS,业务继续
+app -> app :业务回归
+@enduml

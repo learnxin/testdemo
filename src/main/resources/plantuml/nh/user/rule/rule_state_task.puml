@@ -1,0 +1,33 @@
+@startuml
+title 根据状态触发规则任务
+autonumber
+participant "mq" as mq
+participant "应用" as app
+database "db" as db
+participant "下游应用" as oapp
+mq -> app : 拉取消息
+app -> app : 转换、补全用户事件信息
+app -> db :规则查询
+app -> app : 匹配规则
+alt 上游事件符合状态触发类规则
+app -> app :  生成幂等列
+app -> db :根据幂等列查询event
+alt event存在
+app ->mq :事件已处理
+end
+app -> db :插入event
+app -> db : 根据规则id查询未完成匹配的'触发任务'
+alt '触发任务'不存在
+app ->db : 插入任务数据
+app ->mq : 消息已处理
+end
+app ->db : 插入任务事件关联数据
+app ->db : 查询'触发任务'所有匹配事件
+app ->app : 校验所有事件是否已满足'运营任务'
+
+alt 所有事件均满足
+app ->oapp : 发送奖励
+end
+app ->db : 更新'触发任务'状态
+end
+@enduml

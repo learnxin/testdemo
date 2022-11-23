@@ -1,20 +1,163 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/main/java/com/example/demo/lambda/testlambdaone.java" line="281" />
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7854d6e1-f040-46e5-8f86-c253812377b2" name="默认的" comment="默认的">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_43.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__c3p0_c3p0_0_9_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_1_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_1_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_ad_jwt_0_0_1_SNAPSHOT.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_28.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_aliyun_openservices_ons_client_1_7_0_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_ddqc_ddqc_middle_ground_provide_api_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_3_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_8_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_8_9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_8_9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_20_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_inject_extensions_guice_multibindings_3_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_inject_guice_3_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_zxing_core_3_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_zxing_javase_3_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_jhlabs_filters_2_0_235.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_mortennobel_java_image_scaling_0_8_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_mail_javax_mail_1_5_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_9_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_10.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_1_3_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_jsonwebtoken_jjwt_0_7_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_core_2_9_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_schema_2_9_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spi_2_9_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spring_web_2_9_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger2_2_9_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger_common_2_9_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger_ui_2_9_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_swagger_annotations_1_5_20.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_swagger_models_1_5_20.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_inject_javax_inject_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_3_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_1_1_0_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_46.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_8_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_mingsoft_shiro_freemarker_tags_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_2_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_sourceforge_jexcelapi_jxl_2_6_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_pool2_2_4_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_all_1_2_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_core_1_2_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_guice_1_2_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_8_5_16.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_8_5_16.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_8_5_16.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_jdbc_8_5_16.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_juli_8_5_16.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_2_6_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_freemarker_freemarker_2_3_26_incubating.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_library_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_validator_5_3_5_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_1_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jsoup_jsoup_1_10_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_5_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_5_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mapstruct_mapstruct_1_2_0_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_1_10_19.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_4_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_3_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_autoconfigure_1_3_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_starter_1_3_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_2_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_16_22.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_quartz_scheduler_quartz_2_2_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_4_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_25.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_25.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_log4j_over_slf4j_1_7_25.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_7_25.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_1_5_6_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_1_5_6_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_configuration_processor_1_5_6_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_1_5_6_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_freemarker_1_5_6_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_1_5_6_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_1_5_6_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_1_5_6_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_1_5_6_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_1_5_6_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_1_5_6_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_1_5_6_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_hsf_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_pandora_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_integration_spring_integration_core_4_3_11_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_integration_spring_integration_mail_4_3_11_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_plugin_spring_plugin_core_1_2_0_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_plugin_spring_plugin_metadata_1_2_0_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_retry_spring_retry_1_2_1_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_3_10_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_3_10_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_3_10_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_4_3_10_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_3_10_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_3_10_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_4_3_10_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_messaging_4_3_10_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_4_3_10_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_3_10_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_3_10_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_4_3_10_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__p6spy_p6spy_3_8_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__redis_clients_jedis_2_9_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__us_codecraft_webmagic_core_0_7_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__us_codecraft_webmagic_extension_0_7_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__us_codecraft_xsoup_0_3_1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/DemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/DemoApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/lambda/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/lambda/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/lambda/Personson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/lambda/Personson.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/lambda/testlambdaone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/lambda/testlambdaone.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/generator/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/generator/generatorConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/testProxyDP/TestDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/testProxyDP/TestDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/testman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/testman.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/META-INF/spring-configuration-metadata.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application-dev.yml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application-prod.yml" beforeDir="false" />
@@ -26,35 +169,78 @@
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/DateTest/DateUtils.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/DateTest/testDate.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/DateTest/testman.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/DateTest/testreplace.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/DateTest/testtrycath.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/DateUtils.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/DemoApplication.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/ExtendsTest/Mokey.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/ExtendsTest/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/ExtendsTest/TestReflect.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/ExtendsTest/test.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/GeneratorTest/GeneratorSqlmap.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Gentity/CompanyCert1.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Gentity/DonateInfo.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Gentity/DonateOrg.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Gentity/DonatePerson.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Gentity/Equipment.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Gentity/Executive.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Gentity/ExpenseFront.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Gentity/ExpenseInfo.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Gentity/PresentArchival.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Gentity/PresentRelevance.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Gentity/PresentUser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Gentity/VcVendor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Gentity/VendorAccredit.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Gentity/VendorAccreditWithBLOBs.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Gentity/VendorRate.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Gentity/WorkOrderDetails.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Gentity/WorkOrderFile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Gentity/WorkOrderTitle.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Gentity/appendixs.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Gentity/companyBrand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Gentity/companyCategory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Gentity/joinVendor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Gentity/joinVendorCert.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Gentity/joinVendorItem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Gentity/shoreCharger.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Gentity/shoreStake.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Gentity/shoreStation.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Girl.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/HttpClientTest/InterfaceUseTest.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Mapper/DonateInfoMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Mapper/DonateInfoMapper.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Mapper/DonateOrgMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Mapper/DonateOrgMapper.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Mapper/DonatePersonMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Mapper/DonatePersonMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Mapper/EquipmentMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Mapper/EquipmentMapper.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Mapper/ExpenseFrontMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Mapper/ExpenseFrontMapper.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Mapper/ExpenseInfoMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Mapper/ExpenseInfoMapper.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Mapper/PresentArchivalMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Mapper/PresentArchivalMapper.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Mapper/PresentRelevanceMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Mapper/PresentRelevanceMapper.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Mapper/PresentUserMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Mapper/PresentUserMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Mapper/WorkOrderDetailsMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Mapper/WorkOrderDetailsMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Mapper/WorkOrderFileMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Mapper/WorkOrderFileMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Mapper/WorkOrderTitleMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Mapper/WorkOrderTitleMapper.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Mapper/appendixsMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Mapper/appendixsMapper.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Mapper/executiveMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Mapper/executiveMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Mapper/shoreChargerMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Mapper/shoreChargerMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Mapper/shoreStakeMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Mapper/shoreStakeMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Mapper/shoreStationMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Mapper/shoreStationMapper.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/ObserverPattern/Hobserver.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/ObserverPattern/Observer.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/ObserverPattern/ObserverAble.class" beforeDir="false" />
@@ -63,11 +249,48 @@
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/ObserverPattern/UserJavaUtilSuperObj/OtherDate.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/ObserverPattern/UserJavaUtilSuperObj/OtherObserver.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/ObserverPattern/WeatherDate.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/OrderId/OrderCoderUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/TestAnnotation/Dict.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/TestAnnotation/DictInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/TestAnnotation/Organization.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/TestAnnotation/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/TestAnnotation/testAnnotation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/TestReflect/Hobserver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/TestReflect/TestReflect.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/TestTreeSet/OrgTreeVo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/TestTreeSet/OrgVo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/TestTreeSet/testTreeSet.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/WebMvcConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/concurrency/Exttestrun.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/concurrency/TestSynchronize$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/concurrency/TestSynchronize$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/concurrency/TestSynchronize.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/concurrency/onecheap$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/concurrency/onecheap$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/concurrency/onecheap.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/concurrency/runmain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/concurrency/testrun.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/helloboot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/lambda/JwtUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/lambda/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/lambda/Personson.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/lambda/VcVendorCertBase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/lambda/testdonggou.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/lambda/testlambdaone.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/lambda/testlambdaone.java.orig" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/propertiesmap/PropertiesMap.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/scheduled/TestSheduled.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/testAbstract/Father.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/testAbstract/Interfather.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/testAbstract/Interson.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/testAbstract/Son.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/testDate.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/testProxyDP/OwnInvocationHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/testProxyDP/PersonBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/testProxyDP/PersonBeanImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/testProxyDP/TestDemo.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/testman.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/testother/TestOther.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/config.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/generator/generatorConfig.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/jquery.min.js" beforeDir="false" />
@@ -75,9 +298,6 @@
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/demo/DemoApplicationTests.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/testDemo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/testDemo.iml" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <ignored path="$PROJECT_DIR$/target/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -139,294 +359,30 @@
     </expand>
     <select />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="1982771730">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="42" />
-          <entry key="project.open.time.0" value="2" />
-          <entry key="project.open.time.1" value="16" />
-          <entry key="project.open.time.2" value="13" />
-          <entry key="project.open.time.3" value="7" />
-          <entry key="project.open.time.4" value="4" />
-          <entry key="project.open.time.5" value="2" />
-          <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="45" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="class" value="17" />
-          <entry key="java" value="216" />
-          <entry key="orig" value="1" />
-          <entry key="pom" value="2" />
-          <entry key="properties" value="3" />
-          <entry key="sql" value="2" />
-          <entry key="xml" value="23" />
-          <entry key="yml" value="3" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="CLASS" value="17" />
-          <entry key="JAVA" value="216" />
-          <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Properties" value="3" />
-          <entry key="SQL" value="1" />
-          <entry key="Scratch" value="1" />
-          <entry key="XML" value="25" />
-          <entry key="YAML" value="3" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="dummy" value="13" />
-          <entry key="java" value="6807" />
-          <entry key="txt" value="3" />
-          <entry key="xml" value="185" />
-          <entry key="yml" value="35" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JAVA" value="6807" />
-          <entry key="PLAIN_TEXT" value="16" />
-          <entry key="XML" value="185" />
-          <entry key="YAML" value="35" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/lambda/testlambdaone.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="330" column="39" lean-forward="true" selection-start-line="330" selection-start-column="39" selection-end-line="330" selection-end-column="39" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/util/function/Function.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-35">
-              <caret line="40" column="17" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/lambda/testdonggou.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="703">
-              <caret line="114" column="107" lean-forward="true" selection-start-line="114" selection-start-column="107" selection-end-line="114" selection-end-column="107" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/util/ArrayList.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-11">
-              <caret line="164" column="11" selection-start-line="164" selection-start-column="11" selection-end-line="164" selection-end-column="11" />
-              <folding>
-                <element signature="e#6283#6284#0" expanded="true" />
-                <element signature="e#6351#6352#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/lambda/Personson.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/lambda/Person.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-lang3/3.1/commons-lang3-3.1-sources.jar!/org/apache/commons/lang3/StringUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="3827" column="19" selection-start-line="3827" selection-start-column="19" selection-end-line="3827" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/util/function/BiConsumer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="52" column="9" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
         <option value="AnnotationType" />
         <option value="Class" />
+        <option value="UML Sequence" />
+        <option value="UML Class" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>getFirstAndLastDateOfMonth</find>
-      <find>date</find>
-      <find>parse</find>
-      <find>generator</find>
-      <find>add</find>
-      <find>getBundle</find>
-      <find>ResourceBundle</find>
-      <find>imap</find>
-      <find>sum</find>
-      <find>OperatorRespModel</find>
-      <find>mybatis</find>
-      <find>Test</find>
-      <find>test</find>
-      <find>TreeSet</find>
-      <find>toArray</find>
-      <find>deleted</find>
-      <find>BaseResultMap</find>
-      <find>updateByPrimaryKey</find>
-      <find>updateByPrimaryKeySelective</find>
-      <find>title_id</find>
-      <find>detail_id</find>
-      <find>Arrays</find>
-      <find>distinctPrimary</find>
-      <find>BIT</find>
-      <find>seed</find>
-      <find>venname</find>
-      <find>area</find>
-      <find>for</find>
-      <find>toCollection</find>
-      <find>put</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>parameterType=&quot;com.manhui.structure.pro_executive.entity.Executive&quot;</replace>
-      <replace>TINYINT</replace>
-    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/concurrency/runmain.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/concurrency/TestSynchronize.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/concurrency/Exttestrun.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/concurrency/testrun.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/testAbstract/Father.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/testAbstract/Son.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/testAbstract/Interfather.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/testAbstract/Interson.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/ObserverPattern/Hobserver.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/TestReflect/Hobserver.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/TestReflect/TestReflect.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/testProxyDP/PersonBean.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/testProxyDP/testDemo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/testProxyDP/PersonBeanImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/testProxyDP/OwnInvocationHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/testProxyDP/TestDemo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/ExtendsTest/test.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/ExtendsTest/TestReflect.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/ExtendsTest/Person.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/DateTest/testreplace.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/DateTest/testtrycath.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application-dev.yml" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/DemoApplication.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/TestTreeSet/OrgTreeVo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/TestTreeSet/OrgVo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/TestTreeSet/testTreeSet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/scheduled/TestSheduled.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/Mapper/WorkOrderFileMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/OrderId/OrderCoderUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/Mapper/WorkOrderTitleMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/Mapper/WorkOrderDetailsMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/lambda/JwtUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/TestAnnotation/Dict.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/TestAnnotation/testAnnotation.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/TestAnnotation/Organization.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/testother/TestOther.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/TestAnnotation/DictInfo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/Gentity/VendorAccredit.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/Gentity/VendorAccreditWithBLOBs.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/Gentity/VcVendor.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/generator/generatorConfig.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/Gentity/companyCert.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/TestAnnotation/Test.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/Gentity/VendorRate.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/lambda/VcVendorCertBase.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/lambda/testlambdaone.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/lambda/Personson.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/lambda/Person.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/lambda/testdonggou.java" />
-      </list>
-    </option>
-  </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="localRepository" value="$MAVEN_REPOSITORY$" />
+        <option name="localRepository" value="$USER_HOME$/.m2/repository" />
         <option name="mavenHome" value="$USER_HOME$/Documents/maven3" />
-        <option name="userSettingsFile" value="$USER_HOME$/Documents/maven3/conf/settings.xml" />
+        <option name="userSettingsFile" value="$USER_HOME$/Documents/maven3/conf/settings_y.xml" />
       </MavenGeneralSettings>
     </option>
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
   </component>
-  <component name="MavenProjectNavigator">
-    <treeState>
-      <expand />
-      <select />
-    </treeState>
-  </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="y" value="23" />
-    <option name="width" value="840" />
-    <option name="height" value="463" />
-  </component>
+  <component name="ProjectId" id="1pGxtuFHzyQ2YZbprd4EpZ8s9Jx" />
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
       <profile-state>
@@ -447,101 +403,37 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="testDemo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="testDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="testDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="testDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="testDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="testDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
-              <item name="lambda" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="testDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="testDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="generator" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-    </panes>
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultPlantUmlFileTemplate" value="UML Class" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelOrder2" value="2" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RequestMappingsPanelWidth2" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1573910133434" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/com" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/plantuml/nh/user" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/plantuml/nh/user" />
+      <recent name="$PROJECT_DIR$/src/main/resources/plantuml/nh/class" />
+      <recent name="$PROJECT_DIR$/src/main/resources/plantuml/nh/inventory" />
+      <recent name="$PROJECT_DIR$/src/main/resources/plantuml/lession" />
+      <recent name="$PROJECT_DIR$/src/main/resources/plantuml/contract" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources" />
-      <recent name="D:\testDemo\src\main\resources\static\generator" />
-      <recent name="D:\testDemo\src\main\resources" />
-      <recent name="D:\testDemo\src\main\resources\static" />
-      <recent name="D:\testDemo\src\main\resources\templates" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.example.demo.lambda" />
@@ -550,24 +442,15 @@
       <recent name="com.example.demo.TestReflect" />
       <recent name="com.example.demo.Algorithms.chapter1" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\testDemo\src\main\resources\static\generator" />
-      <recent name="D:\testDemo\src\main\resources\static" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/plantuml/nh/user" />
+      <recent name="$PROJECT_DIR$/src/main/resources/plantuml/nh/user/rule" />
+      <recent name="$PROJECT_DIR$/src/main/resources/plantuml/nh/inventory" />
+      <recent name="$PROJECT_DIR$/src/main/resources/plantuml/nh" />
+      <recent name="$PROJECT_DIR$/src/main/resources/plantuml/lession" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="JUnit.testdonggou.func">
+  <component name="RunManager" selected="Application.TestDemo">
     <configuration default="true" type="Applet" factoryName="小应用程序">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -589,64 +472,44 @@
       <module name="" />
       <envs />
     </configuration>
+    <configuration name="TestDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.testProxyDP.TestDemo" />
+      <module name="testDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.demo.testProxyDP.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestDemo.testMacth" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="testDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.demo.testProxyDP.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.demo.testProxyDP" />
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.testProxyDP.TestDemo" />
+      <option name="METHOD_NAME" value="testMacth" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="testdonggou.func" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="testDemo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.demo.lambda.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.demo.lambda" />
-      <option name="MAIN_CLASS_NAME" value="com.example.demo.lambda.testdonggou" />
-      <option name="METHOD_NAME" value="func" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="testdonggou.testNull2Json" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="testDemo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.demo.lambda.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.demo.lambda" />
-      <option name="MAIN_CLASS_NAME" value="com.example.demo.lambda.testdonggou" />
-      <option name="METHOD_NAME" value="testNull2Json" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="testdonggou.testtrycatch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="testDemo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.demo.lambda.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.demo.lambda" />
-      <option name="MAIN_CLASS_NAME" value="com.example.demo.lambda.testdonggou" />
-      <option name="METHOD_NAME" value="testtrycatch" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="testlambdaone.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="testlambdaone.testSkip" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="testDemo" />
       <extension name="coverage">
         <pattern>
@@ -656,24 +519,41 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.example.demo.lambda" />
       <option name="MAIN_CLASS_NAME" value="com.example.demo.lambda.testlambdaone" />
-      <option name="METHOD_NAME" value="test1" />
+      <option name="METHOD_NAME" value="testSkip" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="testlambdaone.testUnique" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="testman.initBooleanArray" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="testDemo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.demo.lambda.*" />
+          <option name="PATTERN" value="com.example.demo.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.demo.lambda" />
-      <option name="MAIN_CLASS_NAME" value="com.example.demo.lambda.testlambdaone" />
-      <option name="METHOD_NAME" value="testUnique" />
+      <option name="PACKAGE_NAME" value="com.example.demo" />
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.testman" />
+      <option name="METHOD_NAME" value="initBooleanArray" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="testman.test3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="testDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.demo" />
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.testman" />
+      <option name="METHOD_NAME" value="test3" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
@@ -737,7 +617,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <properties />
       <listeners />
@@ -745,33 +626,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file id="idea.log" enabled="true" />
+      <predefined_log_file enabled="true" id="idea.log" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.TestDemo" />
+      <item itemvalue="JUnit.testman.test3" />
+      <item itemvalue="JUnit.testman.initBooleanArray" />
+      <item itemvalue="JUnit.testlambdaone.testSkip" />
+      <item itemvalue="JUnit.TestDemo.testMacth" />
       <item itemvalue="Maven.mysql" />
       <item itemvalue="Spring Boot.DemoApplication" />
-      <item itemvalue="JUnit.testlambdaone.test1" />
-      <item itemvalue="JUnit.testdonggou.testtrycatch" />
-      <item itemvalue="JUnit.testlambdaone.testUnique" />
-      <item itemvalue="JUnit.testdonggou.testNull2Json" />
-      <item itemvalue="JUnit.testdonggou.func" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.testdonggou.func" />
-        <item itemvalue="JUnit.testdonggou.testNull2Json" />
-        <item itemvalue="JUnit.testlambdaone.testUnique" />
-        <item itemvalue="JUnit.testdonggou.testtrycatch" />
-        <item itemvalue="JUnit.testlambdaone.test1" />
+        <item itemvalue="Application.TestDemo" />
+        <item itemvalue="JUnit.TestDemo.testMacth" />
+        <item itemvalue="JUnit.testlambdaone.testSkip" />
+        <item itemvalue="JUnit.testman.initBooleanArray" />
+        <item itemvalue="JUnit.testman.test3" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SshConsoleOptionsProvider">
+    <option name="myEncoding" value="UTF-8" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -865,6 +749,66 @@
       <workItem from="1573530340804" duration="1027000" />
       <workItem from="1573633724545" duration="1659000" />
       <workItem from="1573654032441" duration="7818000" />
+      <workItem from="1614823448126" duration="2057000" />
+      <workItem from="1615538690511" duration="2026000" />
+      <workItem from="1615887752770" duration="3027000" />
+      <workItem from="1616589601064" duration="691000" />
+      <workItem from="1616676083623" duration="1368000" />
+      <workItem from="1617163633335" duration="2153000" />
+      <workItem from="1618490651590" duration="6600000" />
+      <workItem from="1618646316005" duration="7668000" />
+      <workItem from="1619009560364" duration="442000" />
+      <workItem from="1619075040581" duration="2141000" />
+      <workItem from="1620909702197" duration="757000" />
+      <workItem from="1621303685379" duration="5215000" />
+      <workItem from="1621844508682" duration="41041000" />
+      <workItem from="1622426161741" duration="1327000" />
+      <workItem from="1623056035366" duration="1671000" />
+      <workItem from="1623120993267" duration="2863000" />
+      <workItem from="1623745781117" duration="8853000" />
+      <workItem from="1624336793686" duration="711000" />
+      <workItem from="1624377107084" duration="2519000" />
+      <workItem from="1625138233931" duration="1013000" />
+      <workItem from="1625559590095" duration="948000" />
+      <workItem from="1626166166789" duration="780000" />
+      <workItem from="1626252484101" duration="2441000" />
+      <workItem from="1628163975555" duration="10943000" />
+      <workItem from="1628239833902" duration="2318000" />
+      <workItem from="1628321599179" duration="1053000" />
+      <workItem from="1628579154717" duration="1671000" />
+      <workItem from="1629615922599" duration="60000" />
+      <workItem from="1629769530212" duration="17782000" />
+      <workItem from="1630135772256" duration="2828000" />
+      <workItem from="1630289215304" duration="5577000" />
+      <workItem from="1630586266817" duration="533000" />
+      <workItem from="1630980804753" duration="520000" />
+      <workItem from="1631082338994" duration="7770000" />
+      <workItem from="1631519246705" duration="4159000" />
+      <workItem from="1632291063641" duration="3359000" />
+      <workItem from="1632295409549" duration="117000" />
+      <workItem from="1632296405808" duration="7373000" />
+      <workItem from="1632734616636" duration="994000" />
+      <workItem from="1632831152826" duration="215000" />
+      <workItem from="1632831377902" duration="54000" />
+      <workItem from="1632831448988" duration="12194000" />
+      <workItem from="1633681011612" duration="1196000" />
+      <workItem from="1633935765425" duration="364000" />
+      <workItem from="1634732988425" duration="2391000" />
+      <workItem from="1634895654345" duration="191000" />
+      <workItem from="1635182030106" duration="975000" />
+      <workItem from="1635841280179" duration="936000" />
+      <workItem from="1636684209677" duration="898000" />
+      <workItem from="1637207146887" duration="4495000" />
+      <workItem from="1637570386285" duration="140000" />
+      <workItem from="1638433979625" duration="3528000" />
+      <workItem from="1639967050756" duration="242000" />
+      <workItem from="1653293072089" duration="440000" />
+      <workItem from="1667896101359" duration="4827000" />
+      <workItem from="1668049683411" duration="1842000" />
+      <workItem from="1668355922230" duration="598000" />
+      <workItem from="1669012711816" duration="1698000" />
+      <workItem from="1669036887638" duration="822000" />
+      <workItem from="1669186007352" duration="5456000" />
     </task>
     <task id="LOCAL-00001" summary="默认的">
       <created>1557974741724</created>
@@ -901,43 +845,134 @@
       <option name="project" value="LOCAL" />
       <updated>1561649862582</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="puml update">
+      <created>1619075239837</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1619075239837</updated>
+    </task>
+    <task id="LOCAL-00007" summary="update puml">
+      <created>1619081985124</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1619081985124</updated>
+    </task>
+    <task id="LOCAL-00008" summary="modify puml">
+      <created>1621413114364</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1621413114364</updated>
+    </task>
+    <task id="LOCAL-00009" summary="commit plant uml">
+      <created>1628220049061</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1628220049061</updated>
+    </task>
+    <task id="LOCAL-00010" summary="commit plant uml">
+      <created>1628223455689</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1628223455689</updated>
+    </task>
+    <task id="LOCAL-00011" summary="commit plant uml">
+      <created>1628223743223</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1628223743223</updated>
+    </task>
+    <task id="LOCAL-00012" summary="库存时序">
+      <created>1629829188716</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1629829188716</updated>
+    </task>
+    <task id="LOCAL-00013" summary="uniqueCode 库存幂等方案&#10;&#10;库存操作第二版">
+      <created>1629909402959</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1629909402959</updated>
+    </task>
+    <task id="LOCAL-00014" summary="库存幂等sequence&#10;&#10;库存事件sequence">
+      <created>1629912444817</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1629912444817</updated>
+    </task>
+    <task id="LOCAL-00015" summary="提交inventory puml">
+      <created>1630028907152</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1630028907152</updated>
+    </task>
+    <task id="LOCAL-00016" summary="inventory puml">
+      <created>1630292063993</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1630292063993</updated>
+    </task>
+    <task id="LOCAL-00017" summary="login_sso">
+      <created>1631520020811</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1631520020811</updated>
+    </task>
+    <task id="LOCAL-00018" summary="inventory 异步调用链路">
+      <created>1631587817745</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1631587817745</updated>
+    </task>
+    <task id="LOCAL-00019" summary="库存优化时序图">
+      <created>1633682419895</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1633682419895</updated>
+    </task>
+    <task id="LOCAL-00020" summary="工程类图">
+      <created>1633682461960</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1633682461960</updated>
+    </task>
+    <task id="LOCAL-00021" summary="test ssh">
+      <created>1634733235906</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1634733235906</updated>
+    </task>
+    <task id="LOCAL-00022" summary="modify pom.xml">
+      <created>1634733623941</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1634733623941</updated>
+    </task>
+    <task id="LOCAL-00023" summary="还原库存缓存时，先获取校验redis">
+      <created>1637217699934</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1637217699934</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
-  </component>
-  <component name="TestHistory">
-    <history-entry file="testdonggou_testtrycatch - 2019.10.16 at 16h 44m 03s.xml">
-      <configuration name="testdonggou.testtrycatch" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="testdonggou_testtrycatch - 2019.10.16 at 16h 46m 16s.xml">
-      <configuration name="testdonggou.testtrycatch" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="testdonggou_testtrycatch - 2019.10.16 at 16h 47m 15s.xml">
-      <configuration name="testdonggou.testtrycatch" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="testlambdaone_testUnique - 2019.10.31 at 01h 28m 23s.xml">
-      <configuration name="testlambdaone.testUnique" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="testlambdaone_testUnique - 2019.10.31 at 01h 30m 46s.xml">
-      <configuration name="testlambdaone.testUnique" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="testdonggou_testNull2Json - 2019.11.13 at 21h 06m 03s.xml">
-      <configuration name="testdonggou.testNull2Json" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="testdonggou_testNull2Json - 2019.11.13 at 22h 12m 21s.xml">
-      <configuration name="testdonggou.testNull2Json" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="testdonggou_func - 2019.11.15 at 17h 45m 41s.xml">
-      <configuration name="testdonggou.func" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="testdonggou_func - 2019.11.15 at 17h 48m 21s.xml">
-      <configuration name="testdonggou.func" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="testdonggou_func - 2019.11.15 at 17h 48m 58s.xml">
-      <configuration name="testdonggou.func" configurationId="JUnit" />
-    </history-entry>
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="227499000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -948,250 +983,149 @@
       <is-autoscroll-to-source value="true" />
     </todo-panel>
   </component>
-  <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18253969" />
-      <window_info id="Structure" order="1" weight="0.24969475" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="Web" order="7" side_tool="true" />
-      <window_info id="设计师" order="8" />
-      <window_info id="设计器" order="9" />
-      <window_info id="Alibaba Cloud Explorer" order="10" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.33265308" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3255102" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32959184" />
-      <window_info anchor="bottom" id="Spring" order="7" weight="0.32959184" />
-      <window_info anchor="bottom" id="Profiler" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4993895" weight="0.32959184" />
-      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="消息" order="11" />
-      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.501221" side_tool="true" weight="0.13163266" />
-      <window_info anchor="bottom" id="Messages" order="13" weight="0.32959184" />
-      <window_info anchor="bottom" id="Java Enterprise" order="14" />
-      <window_info anchor="bottom" id="Version Control" order="15" sideWeight="0.498779" weight="0.32857144" />
-      <window_info anchor="bottom" id="运行" order="16" weight="0.32998884" />
-      <window_info anchor="bottom" id="调试" order="17" weight="0.32959184" />
-      <window_info anchor="bottom" id="Database Changes" order="18" />
-      <window_info anchor="bottom" id="Alibaba Cloud View" order="19" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Maven Projects" order="5" weight="0.10561661" />
-      <window_info anchor="right" id="控制板" order="6" />
-      <window_info anchor="right" id="Database" order="7" weight="0.32967034" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="right" id="Theme Preview" order="9" />
-      <window_info anchor="right" id="Bean Validation" order="10" />
-      <window_info anchor="right" id="Coverage" order="11" side_tool="true" weight="0.32967034" />
-      <window_info anchor="right" id="调色板" order="12" />
-      <window_info anchor="right" id="Alibaba Log Console" order="13" />
-    </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23473282" />
-      <window_info id="Structure" order="1" weight="0.25" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="设计师" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Image Layers" order="6" />
-      <window_info id="Web" order="7" side_tool="true" />
-      <window_info id="Favorites" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.336" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39885715" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Profiler" order="8" />
-      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="10" />
-      <window_info anchor="bottom" id="调试" order="11" />
-      <window_info anchor="bottom" id="Java Enterprise" order="12" />
-      <window_info anchor="bottom" id="Version Control" order="13" show_stripe_button="false" />
-      <window_info anchor="bottom" id="消息" order="14" />
-      <window_info anchor="bottom" id="Spring" order="15" />
-      <window_info anchor="bottom" id="Terminal" order="16" />
-      <window_info anchor="bottom" id="运行" order="17" weight="0.32998884" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Maven Projects" order="4" weight="0.32951653" />
-      <window_info anchor="right" id="Database" order="5" weight="0.32995737" />
-      <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Capture Analysis" order="7" />
-      <window_info anchor="right" id="控制板" order="8" />
-      <window_info anchor="right" id="Bean Validation" order="9" />
-      <window_info anchor="right" id="Theme Preview" order="10" />
-    </layout-to-restore>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
+        <entry key="1">
+          <value>
+            <State />
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-              <option name="COLUMN_ORDER">
-                <list>
-                  <option value="0" />
-                  <option value="1" />
-                  <option value="2" />
-                  <option value="3" />
-                </list>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="默认的" />
-    <option name="LAST_COMMIT_MESSAGE" value="默认的" />
+    <MESSAGE value="puml update" />
+    <MESSAGE value="update puml" />
+    <MESSAGE value="modify puml" />
+    <MESSAGE value="commit plant uml" />
+    <MESSAGE value="库存时序" />
+    <MESSAGE value="uniqueCode 库存幂等方案&#10;&#10;库存操作第二版" />
+    <MESSAGE value="库存幂等sequence&#10;&#10;库存事件sequence" />
+    <MESSAGE value="提交inventory puml" />
+    <MESSAGE value="inventory puml" />
+    <MESSAGE value="login_sso" />
+    <MESSAGE value="inventory 异步调用链路" />
+    <MESSAGE value="库存优化时序图" />
+    <MESSAGE value="工程类图" />
+    <MESSAGE value="test ssh" />
+    <MESSAGE value="modify pom.xml" />
+    <MESSAGE value="还原库存缓存时，先获取校验redis" />
+    <option name="LAST_COMMIT_MESSAGE" value="还原库存缓存时，先获取校验redis" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="463" y="139" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1669188927653">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="463" y="139" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1669188927653" />
+    <state x="657" y="418" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1669212075969">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="657" y="418" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1669212075969" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1669199196797">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1669199196797" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/demo/DateTest/DateUtils.java</url>
           <line>396</line>
-          <properties />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/demo/propertiesmap/PropertiesMap.java</url>
           <line>17</line>
-          <properties />
           <option name="timeStamp" value="5" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/demo/ExtendsTest/TestReflect.java</url>
           <line>9</line>
-          <properties />
           <option name="timeStamp" value="6" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/demo/lambda/testlambdaone.java</url>
-          <line>111</line>
-          <properties />
+          <line>110</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/demo/lambda/testlambdaone.java</url>
           <line>291</line>
-          <properties />
           <option name="timeStamp" value="17" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/demo/lambda/testlambdaone.java</url>
-          <line>300</line>
-          <properties />
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/demo/TestTreeSet/testTreeSet.java</url>
           <line>22</line>
-          <properties />
           <option name="timeStamp" value="22" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/demo/TestTreeSet/testTreeSet.java</url>
           <line>66</line>
-          <properties />
           <option name="timeStamp" value="26" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/demo/lambda/testlambdaone.java</url>
           <line>148</line>
-          <properties />
           <option name="timeStamp" value="30" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/demo/OrderId/OrderCoderUtil.java</url>
           <line>121</line>
-          <properties />
           <option name="timeStamp" value="34" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/demo/lambda/testlambdaone.java</url>
           <line>122</line>
-          <properties />
           <option name="timeStamp" value="37" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/demo/TestAnnotation/Test.java</url>
           <line>20</line>
-          <properties />
           <option name="timeStamp" value="38" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/demo/testother/TestOther.java</url>
           <line>14</line>
-          <properties />
           <option name="timeStamp" value="40" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/demo/lambda/testlambdaone.java</url>
           <line>135</line>
-          <properties />
           <option name="timeStamp" value="43" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/demo/lambda/testdonggou.java</url>
-          <line>27</line>
-          <properties />
-          <option name="timeStamp" value="47" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/demo/lambda/testdonggou.java</url>
-          <line>34</line>
-          <properties />
-          <option name="timeStamp" value="48" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/demo/lambda/testlambdaone.java</url>
-          <line>358</line>
-          <properties />
-          <option name="timeStamp" value="52" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/demo/lambda/testdonggou.java</url>
           <line>61</line>
-          <properties />
           <option name="timeStamp" value="53" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/demo/lambda/testdonggou.java</url>
           <line>89</line>
-          <properties />
           <option name="timeStamp" value="54" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
+        <line-breakpoint type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/demo/TestTreeSet/testTreeSet.java</url>
           <line>19</line>
           <properties class="com.example.demo.TestTreeSet.testTreeSet" method="testtreeset">
@@ -1201,399 +1135,12 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-  </component>
-  <component name="debuggerHistoryManager">
-    <expressions id="evaluateCodeFragment">
-      <expression>
-        <expression-string>t-&gt;keyExtractor.apply(t);</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>seen.putIfAbsent(keyExtractor.apply(t), Boolean.TRUE);</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>keyExtractor.apply(t);</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
-      </expression>
-    </expressions>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/Mapper/WorkOrderTitleMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5270">
-          <caret line="310" column="42" selection-start-line="310" selection-start-column="42" selection-end-line="310" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/util/function/UnaryOperator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="40" column="46" lean-forward="true" selection-start-line="40" selection-start-column="46" selection-end-line="40" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/util/stream/Stream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="1019" column="80" lean-forward="true" selection-start-line="1019" selection-start-column="80" selection-end-line="1019" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://1e5d6789-2136-4e86-a909-652dd41c32ac/schema/bsp/table/base_shore_station.sql" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/1e5d6789-2136-4e86-a909-652dd41c32ac/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/Gentity/shoreCharger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/Gentity/shoreStake.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/Gentity/shoreStation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/Gentity/Equipment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="22" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/TestReflect/Hobserver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="11" column="41" lean-forward="true" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12-sources.jar!/org/junit/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="63" column="35" lean-forward="true" selection-start-line="63" selection-start-column="35" selection-end-line="63" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/TestAnnotation/testAnnotation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/testother/TestOther.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/TestAnnotation/DictInfo.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/Gentity/VendorAccreditWithBLOBs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/generator/generatorConfig.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="661">
-          <caret line="40" column="71" selection-start-line="40" selection-start-column="71" selection-end-line="40" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/Gentity/DonateInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/TestAnnotation/Organization.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="51" column="32" selection-start-line="51" selection-start-column="32" selection-end-line="51" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/Gentity/VcVendor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" selection-start-line="33" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/Gentity/VendorAccredit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/Gentity/VendorRate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="95" column="4" selection-start-line="95" selection-start-column="4" selection-end-line="95" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2-sources.jar!/org/apache/commons/collections/CollectionUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="956" column="36" lean-forward="true" selection-start-line="956" selection-start-column="36" selection-end-line="956" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/TestAnnotation/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="50" column="28" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12-sources.jar!/org/junit/runners/model/FrameworkMethod.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/TestAnnotation/Dict.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-commons/1.5.1/junit-platform-commons-1.5.1.jar!/org/junit/platform/commons/util/ReflectionUtils.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="897">
-          <caret line="363" selection-start-line="363" selection-end-line="363" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/Gentity/companyCert.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/awt/print/Book.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="57" column="30" lean-forward="true" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/20.0/guava-20.0-sources.jar!/com/google/common/collect/CollectPreconditions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="42" column="17" lean-forward="true" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/20.0/guava-20.0-sources.jar!/com/google/common/collect/Lists.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="119" column="45" lean-forward="true" selection-start-line="119" selection-start-column="45" selection-end-line="119" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/commons-beanutils/commons-beanutils/1.9.3/commons-beanutils-1.9.3.jar!/org/apache/commons/beanutils/BeanMap.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-288">
-          <caret line="253" column="21" lean-forward="true" selection-start-line="253" selection-start-column="21" selection-end-line="253" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/google/inject/guice/3.0/guice-3.0.jar!/com/google/inject/internal/util/$ImmutableMap.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="99" column="19" selection-start-line="99" selection-start-column="19" selection-end-line="99" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/util/Map.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="746" selection-start-line="746" selection-end-line="746" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/util/stream/StreamOpFlag.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="364" column="28" lean-forward="true" selection-start-line="364" selection-start-column="28" selection-end-line="364" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/util/TreeSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="924">
-          <caret line="139" column="11" selection-start-line="139" selection-start-column="11" selection-end-line="139" selection-end-column="11" />
-          <folding>
-            <element signature="e#5525#5526#0" expanded="true" />
-            <element signature="e#5572#5573#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/lambda/VcVendorCertBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="635">
-          <caret line="41" column="19" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/util/stream/Collectors.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="924">
-          <caret line="211" column="68" selection-start-line="211" selection-start-column="68" selection-end-line="211" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/util/stream/Collector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="163" column="31" selection-start-line="163" selection-start-column="31" selection-end-line="163" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/TestReflect/TestReflect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="23" column="31" lean-forward="true" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/lambda/JwtUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="12" column="22" lean-forward="true" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/alibaba/fastjson/1.2.28/fastjson-1.2.28.jar!/com/alibaba/fastjson/serializer/JSONSerializer.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="27" column="36" lean-forward="true" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/alibaba/fastjson/1.2.28/fastjson-1.2.28.jar!/com/alibaba/fastjson/JSON.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="434" column="52" selection-start-line="434" selection-start-column="52" selection-end-line="434" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="531">
-          <caret line="2222" column="76" lean-forward="true" selection-start-line="2222" selection-start-column="76" selection-end-line="2222" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-lang3/3.1/commons-lang3-3.1-sources.jar!/org/apache/commons/lang3/StringUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="3827" column="19" selection-start-line="3827" selection-start-column="19" selection-end-line="3827" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/lambda/testlambdaone.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="330" column="39" lean-forward="true" selection-start-line="330" selection-start-column="39" selection-end-line="330" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/util/function/Function.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-35">
-          <caret line="40" column="17" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/util/function/BiConsumer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="52" column="9" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/util/ArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-11">
-          <caret line="164" column="11" selection-start-line="164" selection-start-column="11" selection-end-line="164" selection-end-column="11" />
-          <folding>
-            <element signature="e#6283#6284#0" expanded="true" />
-            <element signature="e#6351#6352#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/lambda/Personson.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/lambda/Person.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/lambda/testdonggou.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="703">
-          <caret line="114" column="107" lean-forward="true" selection-start-line="114" selection-start-column="107" selection-end-line="114" selection-end-column="107" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo typeName="java.lang.String" fieldName="hash" />
+        <PinnedItemInfo typeName="java.util.HashMap$Node" fieldName="value" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
   <component name="masterDetails">
     <states>

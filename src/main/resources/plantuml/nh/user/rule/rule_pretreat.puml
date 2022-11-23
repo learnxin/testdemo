@@ -1,0 +1,20 @@
+@startuml
+title 数据预处理模块
+autonumber
+participant "mq" as mq
+participant "规则服务" as app
+participant "用户服务" as user
+participant "订单服务" as order
+mq -> app : 拉取消息
+alt 流程说明
+app -> app : 转换消息体
+alt 没有会员id
+app -> user : 使用aid等获取oneid
+end
+app -> app : 根据oneid获取人群id
+alt 机票
+app -> order : 补充票联状态、航班日期等字段
+end
+end
+
+@enduml
